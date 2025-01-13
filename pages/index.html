@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-spire - Open Minds, Open Possibilities</title>
+    <style>
+        :root {
+            --primary-teal: #40B3A2;
+            --primary-orange: #FF5722;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --background-light: #F5F5F5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            height: 30px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        .get-started {
+            background: var(--primary-orange);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            z-index: 10;
+            position: relative;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            color: var(--primary-teal);
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .hero p {
+            color: var(--text-dark);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+
+        .wave-container {
+            position: relative;
+            height: 300px;
+            margin-top: -100px;
+        }
+
+        .wave {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .wave-teal {
+            background: var(--primary-teal);
+            transform: skewY(-5deg);
+            z-index: -2;
+        }
+
+        .wave-orange {
+            background: var(--primary-orange);
+            transform: skewY(-3deg);
+            z-index: -1;
+        }
+
+        /* Map Section   padding: 2rem 5%;*/
+        .map-section {
+           
+            margin-top: -150px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .map-card {
+            background: white;
+            border-radius: 0px;
+             padding-top: 3rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          
+            margin: 0 auto;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4rem 5%;
+            text-align: center;
+            background: white;
+        }
+
+        .features h2 {
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+	    font-size: 2rem;
+        }
+
+        .features p {
+            color: var(--text-light);
+            margin-bottom: 3rem;
+        }
+
+        .feature-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .feature-card:nth-child(1) {
+            background-color: #E6F7F5; /* Light teal for the first card */
+        }
+
+        .feature-card:nth-child(2) {
+            background-color: #F2F2F2; /* Light gray for the second card */
+        }
+
+        .feature-card:nth-child(3) {
+            background-color: #FFF0EB; /* Light orange for the third card */
+        }
+
+        .feature-card h3 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card:nth-child(1) h3 {
+            color: var(--primary-teal);
+        }
+
+        .feature-card:nth-child(3) h3 {
+            color: var(--primary-orange);
+        }
+
+        /* Services Section padding: 0rem 5%;*/
+        .services {
+            
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .services-content h2 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            max-width: 100%;
+        }
+
+        .services-content > p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 100%;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+	    padding-left: 5rem;
+        }
+
+        .service-item .icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .service-item.teal .icon {
+            background: var(--primary-teal);
+        }
+
+        .service-item.orange .icon {
+            background: var(--primary-orange);
+        }
+
+        .service-item h3 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .service-item p {
+            color: var(--text-light);
+        }
+
+        .chart-container {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Database Section */
+        .database {
+            padding: 4rem 5%;
+            text-align: center;
+            background: var(--background-light);
+        }
+
+        .database h2 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .database p {
+            color: var(--text-light);
+            margin-bottom: 3rem;
+        }
+
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .feature-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .logo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="../svgComponents/edu-reach-color-logo.svg" alt="Edu Reach logo">
+            
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#documentation">Documentation</a>
+            <a href="#download">Download</a>
+            <a href="#community">Community</a>
+        </div>
+        <button class="get-started">Get Started</button>
+    </nav>
+
+    <section class="hero">
+        <h1>Open Minds, Open Possibilities</h1>
+        <p>Welcome to Edu Reach, the ultimate platform for transformative e-learning solutions, offering AI-powered tools for content creation and seamless learning management.</p>
+        <button class="get-started">Get Started</button>
+    </section>
+
+    <!-- <div class="wave-container">
+        <div class="wave wave-teal"></div>
+        <div class="wave wave-orange"></div>
+    </div> --> 
+
+    <section class="map-section">
+        <div class="map-card">
+            <img src="map1.png" alt="Course distribution map" style="width: 100%;">
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Features</h2>
+        <p>Unleash the power of LMS with advanced features that improve user engagement, simplify content management, and provide flexible learning solutions.</p>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <h3>Customized Website Templates</h3>
+                <p>Create a fully personalized e-learning platform with customizable templates that align with branding and educational objectives.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Content Management System</h3>
+                <p>Effortlessly manage, organize, and update course content with a powerful content management system designed to optimize creation, delivery, and maintenance.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Question Bank Generator</h3>
+                <p>Generate customizable assessments with AI-driven question bank generator, enabling the creation of varied question types to meet diverse requirements.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="services-content">
+            <h2>Explore services designed to elevate content creation and learning management.</h2>
+            <p>Boost productivity and optimize learning management with our customized services.
+            <div class="service-item teal">
+                <div class="icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="11" stroke="white" stroke-width="2"/>
+                        <path d="M8 12L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3>Carefully designed</h3>
+                    <p>Crafted with precision to meet the unique needs of modern learning environments.</p>
+                </div>
+            </div>
+            <div class="service-item orange">
+                <div class="icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="11" stroke="white" stroke-width="2"/>
+                        <path d="M12 6V12L16 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3>Seamless Sync</h3>
+                    <p>Seamlessly sync content and data across systems, ensuring consistency and real-time updates.</p>
+                </div>
+            </div>
+        </div>
+        <div class="chart-container">
+            <img src="chart.png" alt="Course statistics chart" style="width: 100%;">
+        </div>
+    </section>
+
+    <section class="database">
+        <h2>Supported Database</h2>
+        <p>Explore the databases supported for seamless integration and efficient data management.</p>
+        <div class="logo-grid">
+            <div class="logo-item">LOGOS</div>
+            <div class="logo-item">LOGOS</div>
+            <div class="logo-item">LOGOS</div>
+            <div class="logo-item">LOGOS</div>
+            <div class="logo-item">LOGOS</div>
+            <div class="logo-item">LOGOS</div>
+            <div class="logo-item">LOGOS</div>
+            <div class="logo-item">LOGOS</div>
+            <div class="logo-item">LOGOS</div>
+            <div class="logo-item">LOGOS</div>
+        </div>
+    </section>
+</body>
+</html>
+
