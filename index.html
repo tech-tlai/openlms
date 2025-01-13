@@ -21,20 +21,20 @@
                     <img src="svgComponents/edu-reach-color-logo.svg" alt="EduReach Logo" class="h-8">
                 </a>
             </div>
-            <div class="hidden md:flex items-center space-x-6 text-sm">
+            <!-- <div class="hidden md:flex items-center space-x-6 text-sm">
                 <a href="#" class="text-gray-600 hover:text-gray-900">Home</a>
                 <a href="#" class="text-gray-600 hover:text-gray-900">Documentation</a>
                 <a href="https://github.com/tech-tlai/openlms_public_ui" target="_blank" class="text-gray-600 hover:text-gray-900">Download</a>
-                <a href="#" class="text-gray-600 hover:text-gray-900">Community</a>
-                <button class="bg-orange-500 text-white px-6 py-2 rounded-md hover:bg-orange-600 font-semibold">
+                <a href="#" class="text-gray-600 hover:text-gray-900">Community</a> -->
+                <!-- <button class="bg-orange-500 text-white px-6 py-2 rounded-md hover:bg-orange-600 font-semibold">
                     Get Started
-                </button>
-            </div>
+                </button> -->
+            <!-- </div> -->
         </nav>
     </header>
 
 <!-- Hero Section -->
-<section class="pt-20 pb-12 md:pt-28 md:pb-20 bg-white">
+<section class="pt-20 pb-12 md:pt-20 md:pb-12 bg-white">
     <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div class="max-w-xl">
@@ -44,17 +44,17 @@
                 </h1>
                 <div class="space-y-4">
                     <p class="text-base font-semibold text-gray-700">
-                        Our platform enables personalized, dynamic learning experiences for educators and students alike.
+                        Empowering educators and learners with personalized, dynamic tools to transform education for everyone.
                     </p>
                     <p class="text-sm text-gray-600 text-sm">
-                        We're dedicated to transforming the way educators, students, and organizations engage with learning by providing cutting-edge tools designed to enhance both teaching and learning experiences.
+                        At Edu Reach, we are dedicated to creating a more inclusive learning environment by equipping educators, students, and organizations with innovative tools that enhance teaching, foster engagement, and deliver impactful learning experiences.
                     </p>
                 </div>
-                <div class="mt-8">
+                <!-- <div class="mt-8">
                     <button class="bg-orange-500 text-white px-8 py-3 rounded-md hover:bg-orange-600 transition-colors font-semibold text-sm">
                         Get Started
                     </button>
-                </div>
+                </div> -->
             </div>
             <div class="relative">
                 <img 
@@ -69,7 +69,7 @@
 
     <!-- Services Section -->
 
-            <section class="py-16">
+            <section class="py-14">
                 <div class="container mx-auto px-8">
                     <div class="bg-[#E8F7F7] rounded-lg p-10 mb-16">
                         <div class="text-center max-w-3xl mx-auto">
@@ -84,9 +84,9 @@
                     </div>
             
     
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 gap-8">
                 <!-- Service Card 1 -->
-                <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-start justify-between relative">
+                <!-- <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-start justify-between relative">
                     <div class="absolute top-0 left-0 w-full h-1 bg-orange-500 rounded-lg mb-1"></div>
                     <div>
                         <div class="flex items-center justify-between mb-4">
@@ -104,7 +104,7 @@
                         </button>
                     </a>
                 </div>
-    
+     -->
                 <!-- Service Card 2 -->
                 <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-start justify-between relative">
                     <div class="absolute top-0 left-0 w-full h-1 bg-orange-500 rounded-lg mb-1"></div>
@@ -113,16 +113,29 @@
                             <img src="svgComponents/cardIcon2.svg" alt="Content Management" class="w-12 h-12">
                             <span class="text-orange-500 font-bold text-sm">243+</span>
                         </div>
-                        <h4 class="text-xl font-semibold mb-3  text-[#1B365D]">Content Management System</h4>
+                        <h4 class="text-xl font-semibold mb-3  text-[#1B365D]">Learning Management System</h4>
                         <p class="text-gray-600 mb-4 text-sm">
-                            Simplifies the creation, organization, and distribution of educational materials. With an intuitive interface and powerful features.
+                            Simplifies the creation, organization, and distribution of learning content. With an intuitive interface and powerful features.
                         </p>
                     </div>
-                    <button class="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 text-sm font-semibold">
-                        Know more
-                    </button>
+                   <div class="flex flex-wrap gap-2 mt-2">
+                    <a href="https://github.com/tech-tlai/openlms_public_ui" target="_blank">
+                      <button class="bg-orange-500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200">
+                        Download
+                      </button>
+                    </a>
+
+                      <button class="bg-orange-500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200">
+                        Documentation
+                      </button>
+                      <a href="pages/index.html">
+                        <button class="bg-orange-500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200">
+                            Know more
+                        </button>
+                    </a>
+                    </div>
                 </div>
-    
+
                 <!-- Service Card 3 -->
                 <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-start justify-between relative">
                     <div class="absolute top-0 left-0 w-full h-1 bg-orange-500 rounded-lg mb-1"></div>
@@ -133,19 +146,27 @@
                         </div>
                         <h4 class="text-xl font-semibold mb-3  text-[#1B365D]">Question Bank Generator</h4>
                         <p class="text-gray-600 mb-4 text-sm">
-                            Generate customized quizzes and exams effortlessly with our Question Bank Tool. Create diverse question types quickly and accurately.
+                            Generate customized quizzes and exams effortlessly with our Question Bank Generator. Create diverse question types quickly and accurately.
                         </p>
                     </div>
-                    <button class="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 text-sm font-semibold">
-                        Know more
-                    </button>
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        <button class="bg-orange-500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200">
+                          Download
+                        </button>
+                        <button class="bg-orange-500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200">
+                          Documentation
+                        </button>
+                        <button class="bg-orange-500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200">
+                          Know More
+                        </button>
+                      </div>
                 </div>
             </div>
         </div>
     </section>
     
     <!-- Content Creation Section -->
-    <section class="py-16">
+    <!-- <section class="py-14">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
@@ -178,49 +199,18 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Supported Database Section -->
-    <section class="py-16 bg-gray-50">
+    <!-- <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <h2 class="text-2xl font-bold text-center text-gray-800 mb-4">Supported Database</h2>
             <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12 text-sm">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
-            <!-- <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
-                <div class="flex items-center justify-center">
-                    <span class="text-gray-400 font-medium">LOGOS</span>
-                </div>
-                <div class="flex items-center justify-center">
-                    <span class="text-gray-400 font-medium">LOGOS</span>
-                </div>
-                <div class="flex items-center justify-center">
-                    <span class="text-gray-400 font-medium">LOGOS</span>
-                </div>
-                <div class="flex items-center justify-center">
-                    <span class="text-gray-400 font-medium">LOGOS</span>
-                </div>
-                <div class="flex items-center justify-center">
-                    <span class="text-gray-400 font-medium">LOGOS</span>
-                </div>
-                <div class="flex items-center justify-center">
-                    <span class="text-gray-400 font-medium">LOGOS</span>
-                </div>
-                <div class="flex items-center justify-center">
-                    <span class="text-gray-400 font-medium">LOGOS</span>
-                </div>
-                <div class="flex items-center justify-center">
-                    <span class="text-gray-400 font-medium">LOGOS</span>
-                </div>
-                <div class="flex items-center justify-center">
-                    <span class="text-gray-400 font-medium">LOGOS</span>
-                </div>
-                <div class="flex items-center justify-center">
-                    <span class="text-gray-400 font-medium">LOGOS</span>
-                </div>
-            </div> -->
+         
             <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
-                <!-- Repeat this div 10 times -->
+                Repeat this div 10 times
                 <div class="flex items-center justify-start px-6 py-4 bg-gray-50 rounded-lg">
                     <div class="flex items-center gap-2">
                         <img src="svgComponents/dotsGray.svg" alt="" class="w-4 h-4" aria-hidden="true">
@@ -284,6 +274,6 @@
             </div>
        
         </div>
-    </section>
+    </section> -->
 </body>
 </html>
