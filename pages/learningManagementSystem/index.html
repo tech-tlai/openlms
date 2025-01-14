@@ -113,12 +113,14 @@
               class="block text-xl text-gray-600 hover:text-gray-900"
               >Home</a
             >
-            <a href="#" class="block text-xl text-gray-600 hover:text-gray-900"
+            <a
+              href="pages/lms-docs/index.html"
+              target="_blank"
+              class="block text-xl text-gray-600 hover:text-gray-900"
               >Documentation</a
             >
             <a
-              href="https://github.com/tech-tlai/openlms_public_ui"
-              target="_blank"
+              href="pages/learningManagementSystem/index.html#download-section"
               class="block text-xl text-gray-600 hover:text-gray-900"
               >Download</a
             >
@@ -135,8 +137,7 @@
             >Documentation</a
           >
           <a
-            href="https://github.com/tech-tlai/openlms_public_ui"
-            target="_blank"
+            href="pages/learningManagementSystem/index.html#download-section"
             class="text-gray-600 hover:text-gray-900"
             >Download</a
           >
@@ -349,7 +350,10 @@
         </div>
 
         <!-- Download Cards Grid -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          id="download-section"
+        >
           <!-- Public Frontend Card -->
           <div
             class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-start justify-between relative"
@@ -368,16 +372,28 @@
                 </p>
               </div>
             </div>
-            <a
-              href="https://github.com/tech-tlai/openlms_public_ui"
-              target="_blank"
-            >
-              <button
-                class="bg-orange500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200"
+            <div class="flex gap-2">
+              <a
+                href="https://github.com/tech-tlai/openlms_public_ui"
+                target="_blank"
               >
-                Download
-              </button>
-            </a>
+                <button
+                  class="bg-orange500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200"
+                >
+                  Download
+                </button>
+              </a>
+              <a
+                href="https://development.d3r3vmd5ke99oo.amplifyapp.com"
+                target="_blank"
+              >
+                <button
+                  class="bg-orange500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200"
+                >
+                  View Demo
+                </button>
+              </a>
+            </div>
           </div>
 
           <!-- Admin Frontend Card -->
@@ -452,7 +468,7 @@
             class="h-20 flex items-center justify-center mb-4 p-4 shadow-md w-full"
           >
             <img
-              src="/images/bankOfAmerica.png"
+              src="images/bankOfAmerica.png"
               alt="Bank of America"
               class="max-h-full object-contain"
             />
@@ -468,7 +484,7 @@
                 class="h-20 flex items-center justify-center mb-4 p-4 shadow-md w-full"
               >
                 <img
-                  src="/images/tensorLogiclogo.png"
+                  src="images/tensorLogiclogo.png"
                   alt="TensorLogic"
                   class="max-h-full object-contain"
                 />
