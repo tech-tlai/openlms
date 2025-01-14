@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduReach - Question Bank Generator</title>
+    <base href="/OPENLMS/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coral: '#FF5C35',
+                        lightTeal: '#E5F6F4',
+                        teal: '#40B3A2',
+                        orange: '#FF5722',
+                        orange500: '#f97316',
+                        lightOrange: '#FFEDE5',
+                        darkGray: '#4A4A4A',
+                        lightGray: '#EAEAEA',
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+             const mobileMenuButton = document.getElementById('mobile-menu-button');
+             const mobileMenu = document.getElementById('mobile-menu');
+             const body = document.body;
+ 
+             function toggleMenu() {
+                 mobileMenu.classList.toggle('hidden');
+                 body.classList.toggle('menu-open');
+                 
+                 // Toggle between menu and close icons
+                 if (mobileMenu.classList.contains('hidden')) {
+                     mobileMenuButton.innerHTML = '<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
+                 } else {
+                     mobileMenuButton.innerHTML = '<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+                 }
+             }
+ 
+             mobileMenuButton.addEventListener('click', toggleMenu);
+ 
+             // Close mobile menu when clicking a link
+             mobileMenu.querySelectorAll('a').forEach(link => {
+                 link.addEventListener('click', toggleMenu);
+             });
+ 
+             // Close mobile menu when window is resized to larger screen
+             window.addEventListener('resize', function() {
+                 if (window.innerWidth >= 768) { // 768px is the 'md' breakpoint in Tailwind
+                     mobileMenu.classList.add('hidden');
+                     body.classList.remove('menu-open');
+                     mobileMenuButton.innerHTML = '<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
+                 }
+             });
+         });
+     </script>
+     <style>
+        .menu-open {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Header -->
+    <header class="sticky top-0 left-0 right-0 bg-gray-50 z-50 shadow-sm">
+        <nav class=" mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <a href="/index.html">
+                    <img src="/svgComponents/edu-reach-color-logo.svg" alt="EduReach Logo" class="h-8">
+                </a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-900 focus:outline-none z-50 relative">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-40 flex flex-col items-center justify-center">
+                <div class="text-center space-y-8">
+                    <a href="/index.html" class="block text-xl text-gray-600 hover:text-gray-900">Home</a>
+                    <a href="#" class="block text-xl text-gray-600 hover:text-gray-900">Documentation</a>
+                    <a href="https://github.com/tech-tlai/openlms_public_ui" target="_blank" class="block text-xl text-gray-600 hover:text-gray-900">Download</a>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-6 text-sm">
+                <a href="/index.html" class="text-gray-600 hover:text-gray-900">Home</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">Documentation</a>
+                <a href="https://github.com/tech-tlai/openlms_public_ui" target="_blank" class="text-gray-600 hover:text-gray-900">Download</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-white overflow-hidden px-8 pb-32 ">
+        <div class="max-w-7xl mx-auto  ">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                <!-- Text Content -->
+                <div class="z-10 pt-10 lg:pt-20">
+                    <h1 class="text-4xl md:text-5xl font-bold text-[#305D7A] leading-tight mb-6">
+                        Question bank<br>Generation Tool
+                    </h1>
+                    <h2 class="text-base font-bold text-gray-700 mb-2">
+                        UNLOCK THE POWER OF AUTOMATED QUESTION BANK CREATION
+                    </h2>
+                    <p class="text-gray-600 text-sm">
+                        Create comprehensive, high-quality question banks effortlessly with our open-source platform. 
+                        Whether you're building quizzes, exams, or study materials, our intelligent tools streamline the 
+                        process, making it easier than ever to generate, customize, and manage your questions.
+                    </p>
+                </div>
+                
+                <!-- Hero Image -->
+                <div class="relative z-10">
+                    <img src="/svgComponents/questionBankHeroSectionImage.svg" 
+                         alt="Question Bank Generation Tool Illustration" 
+                         class="w-full h-[300px] lg:h-auto max-w-2xl mx-auto">
+                </div>
+            </div>
+        </div>
+
+        <!-- Wave Background -->
+        <div class="absolute bottom-0 left-0 right-0 w-full overflow-hidden max-w-7xl mx-auto">
+            <svg width="1437" height="520" viewBox="0 0 1437 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1436.5 57C1027.3 351 304 379.5 -2 327V379.5C661.5 660.5 1239.83 454.667 1436.5 316V57Z" fill="#FF611A"/>
+                <path d="M1437 0.5C1027.8 294.5 304.5 326.5 -1.5 274V345.5C670.1 591.9 1240.33 398.167 1437 259.5V0.5Z" fill="#3FABAE"/>
+                </svg>
+        </div>
+    
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-8 px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Features</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Unleash the power of AI with advanced features that improve user engagement, simplify content management, and provide flexible learning solutions.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-lightTeal p-6 rounded-lg shadow-lg relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-teal rounded-t-lg"></div>
+                    <div class="flex gap-2 items-start">
+                    <img src="/svgComponents/dotsBlue.svg" alt="Feature icon" class="w-8 h-8 mb-4">
+                    <div class="flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3">Topic-Based Question Selection</h3>
+                    <p class="text-gray-600 text-sm">Choose specific topics within a subject and generate a bank of questions that match your requirements.</p>
+                </div>
+                </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-lightGray p-6 rounded-lg shadow-lg relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-darkGray rounded-t-lg"></div>
+                    <div class="flex gap-2 items-start">
+                    <img src="/svgComponents/dotsGray.svg" alt="Feature icon" class="w-8 h-8 mb-4">
+                    <div class="flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3">Question Type Customization</h3>
+                    <p class="text-gray-600 text-sm">Select from a variety of question formats: Multiple Choice, True/False, Fill-in-the-blanks, Short Answer, and more to create diverse question papers.</p>
+                </div>
+                </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-lightOrange p-6 rounded-lg shadow-lg relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-orange500 rounded-t-lg"></div>
+                    <div class="flex gap-2 items-start">
+                    <img src="/svgComponents/dotsOrange.svg" alt="Feature icon" class="w-8 h-8 mb-4">
+                    <div class="flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3">Automatic Difficulty Adjustment</h3>
+                    <p class="text-gray-600 text-sm">Set the desired difficulty level for your questions, and let the tool adjust accordingly.</p>
+                </div>
+                </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-lightOrange p-6 rounded-lg shadow-lg relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-orange500 rounded-t-lg"></div>
+                    <div class="flex gap-2 items-start">
+                    <img src="/svgComponents/dotsOrange.svg" alt="Feature icon" class="w-8 h-8 mb-4">
+                    <div class="flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3">Question Pool Size Control</h3>
+                    <p class="text-gray-600 text-sm">Easily choose how many questions you need. Whether it's a small quiz or a comprehensive exam, we've got you covered.</p>
+                </div>
+                </div>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-lightTeal p-6 rounded-lg shadow-lg relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-teal rounded-t-lg"></div>
+                    <div class="flex gap-2 items-start">
+                    <img src="/svgComponents/dotsBlue.svg" alt="Feature icon" class="w-8 h-8 mb-4">
+                    <div class="flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3">Export & Download Options</h3>
+                    <p class="text-gray-600 text-sm">Once your question bank is ready, download it in a format that suits your needs (PDF, Word, or CSV).</p>
+                </div>
+                </div>
+                </div>
+               
+                <!-- Feature 6 -->
+                <div class="bg-lightGray p-6 rounded-lg shadow-lg relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-darkGray rounded-t-lg"></div>
+                    <div class="flex gap-2 items-start">
+                    <img src="/svgComponents/dotsGray.svg" alt="Feature icon" class="w-8 h-8 mb-4">
+                    <div class="flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3">Question Analytics</h3>
+                    <p class="text-gray-600 text-sm">Gain insights into question bank with analytics, showing coverage by topic, difficulty, and type to ensure a balanced paper.</p>
+                </div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="bg-white py-8 px-8">
+        <div class=" max-w-7xl mx-auto ">
+            <h2 class="text-3xl font-bold mb-4 text-[#305D7A]">Why Choose Question Bank Generator Tool?</h2>
+            <p class="text-gray-600  mb-12 max-w-2xl">
+                As an educator, creating fair and comprehensive question papers can be time-consuming. QuestionBank Generator is your open-source, customizable tool that lets you create high-quality question banks quickly and easily—saving you time to focus on what matters most: teaching.
+            </p>
+            
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <!-- Customizable Card -->
+                <div class="p-6 rounded-lg bg-[#F5FAFA] shadow-sm">
+                    <div class="flex items-center">
+                       <img src="/svgComponents/windowAndCursorIcon.svg" alt="" class="w-14 h-14">
+                        <div class="w-px h-14 bg-gray-500 mx-4"></div>
+                        <h3 class=" font-bold text-gray-800">
+                            CUSTOMIZABLE<br>FOR YOUR NEEDS
+                        </h3>
+                    </div>
+                </div>
+            
+                <!-- Save Time Card -->
+                <div class="p-6 rounded-lg bg-[#F8F9FA] shadow-sm">
+                    <div class="flex items-center">
+                        <img src="/svgComponents/teachingIcon.svg" alt="" class="w-14 h-14">
+                        <div class="w-px h-14 bg-gray-500 mx-4"></div>
+                        <h3 class="font-bold text-gray-800">
+                            SAVE TIME,<br>TEACH MORE
+                        </h3>
+                    </div>
+                </div>
+            
+                <!-- Comprehensive Card -->
+                <div class="p-6 rounded-lg bg-[#FFF5F2] shadow-sm">
+                    <div class="flex items-center">
+                       <img src="/svgComponents/comprehensiveCoverageIcon.svg" alt="" class="w-14 h-14">
+                        <div class="w-px h-14 bg-gray-500 mx-4"></div>
+                        <h3 class="font-bold text-gray-800">
+                            COMPREHENSIVE<br>COVERAGE
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-8 pb-20 px-8 md:px-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-6 lg:gap-16 items-start justify-items-center">
+                <!-- Left Column -->
+                <div class="w-full lg:w-1/2 ">
+                    <h2 class="text-2xl md:text-3xl font-bold text-[#305D7A] mb-4">Hear from our<br class="hidden md:inline"> Educators</h2>
+                    <p class="text-sm md:text-base text-gray-600">
+                        Experience the inspiring voices of educators who are shaping the future of learning with EduReach. Through innovative tools and a commitment to excellence, they are transforming classrooms into dynamic spaces where students thrive. 
+                    </p>
+                </div>
+    
+                <!-- Right Column - Testimonial Card -->
+                <div class="flex flex-col w-full lg:w-1/2 items-center justify-center bg-white rounded-lg ">
+                    <!-- Image Container with Beige Background -->
+                    <div class="w-full rounded-t-lg p-4">
+                        <img 
+                            src="/pages/questionBankGeneration/testimonial image.png" 
+                            alt="Manoj Kumar Jha" 
+                            class="w-full h-auto rounded-lg max-w-sm mx-auto"
+                        />
+                    </div>
+    
+                    <!-- Testimonial Content -->
+                    <div class="py-4 px-6 w-full">
+                        <!-- Author Info -->
+                        <div class="mb-4">
+                            <h4 class="font-bold text-gray-900 uppercase text-xs md:text-sm tracking-wide">MANOJ KUMAR JHA</h4>
+                            <p class="text-gray-600 text-xs md:text-sm">Soft specialist, Ranchi, Jharkhand</p>
+                        </div>
+    
+                        <!-- Quote -->
+                        <div class="relative">
+                            <span class="absolute -left-2 -top-4 text-4xl text-gray-300">"</span>
+                            <p class="text-gray-600 pl-6 text-xs md:text-sm">
+                                As a teacher with a busy schedule, the QuestionBank Generator has been a game-changer for me. It allows me to create customized, high-quality question papers in minutes, saving the hours of planning time. I can easily select topics, adjust difficulty levels, and generate exactly what I need for each class. This tool has truly transformed the way I prepare assessments, and I can't recommend it enough!
+                            </p>
+                        </div>
+    
+                        <!-- Navigation Buttons -->
+                        <div class="flex justify-between items-center mt-6  mx-auto">
+                            <button class="w-6 h-6 flex items-center justify-center bg-orange500 border border-gray-300 rounded-full text-white hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                            <button class="w-6 h-6 flex items-center justify-center bg-orange500 border border-gray-300 rounded-full text-white hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-[#3A3A3A] py-12 px-4">
+        <div class="container mx-auto px-4 flex flex-row gap-2 items-center w-full justify-center">
+              <img src="/svgComponents/logoWhite.svg" alt="EduReach Logo" class="h-6 sm:h-8">
+              <div class="w-px h-14 bg-gray-500 mx-8"></div>
+            <div class="text-white text-xs sm:text-sm">
+              © 2025. RSETI. All rights reserved
+          </div>
+        </div>
+      </footer>
+    
+    
+</body>
+</html>
