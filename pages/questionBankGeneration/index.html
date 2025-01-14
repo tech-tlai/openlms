@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduReach - Question Bank Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coral: '#FF5C35',
+                        lightTeal: '#E5F6F4',
+                        teal: '#40B3A2',
+                        orange: '#FF5722',
+                        orange500: '#f97316',
+                        lightOrange: '#FFEDE5',
+                        darkGray: '#4A4A4A',
+                        lightGray: '#EAEAEA',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans">
+    <!-- Header -->
+    <header class="bg-white py-4 px-6 flex items-center justify-between shadow-sm">
+        <div class="flex items-center">
+            <img src="/svgComponents/edu-reach-color-logo.svg" alt="EduReach Logo" class="h-8">
+        </div>
+        <nav class="hidden md:flex items-center space-x-6">
+            <a href="#" class="text-gray-600 hover:text-gray-900">Home</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900">Documentation</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900">Download</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900">Community</a>
+            <a href="#" class="bg-coral text-white px-4 py-2 rounded-md hover:bg-opacity-90">Get Started</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-32">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <!-- Text Content -->
+                <div class="z-10">
+                    <h1 class="text-4xl md:text-5xl font-bold text-[#305D7A] leading-tight mb-6">
+                        Question bank<br>Generation Tool
+                    </h1>
+                    <h2 class="text-base font-semibold text-gray-700">
+                        Unlock the power of automated question bank creation
+                    </h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto font-semibold">
+                        Create comprehensive, high-quality question banks effortlessly with our open-source platform. 
+                        Whether you're building quizzes, exams, or study materials, our intelligent tools streamline the 
+                        process, making it easier than ever to generate, customize, and manage your questions.
+                    </p>
+                </div>
+                
+                <!-- Hero Image -->
+                <div class="relative z-10">
+                    <img src="/svgComponents/questionBankHeroSectionImage.svg" 
+                         alt="Question Bank Generation Tool Illustration" 
+                         class="w-full h-auto max-w-2xl mx-auto">
+                </div>
+            </div>
+        </div>
+
+        <!-- Wave Background -->
+        <div class="absolute bottom-0 left-0 right-0 w-full overflow-hidden">
+            <svg width="1437" height="520" viewBox="0 0 1437 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1436.5 57C1027.3 351 304 379.5 -2 327V379.5C661.5 660.5 1239.83 454.667 1436.5 316V57Z" fill="#FF611A"/>
+                <path d="M1437 0.5C1027.8 294.5 304.5 326.5 -1.5 274V345.5C670.1 591.9 1240.33 398.167 1437 259.5V0.5Z" fill="#3FABAE"/>
+                </svg>
+        </div>
+    
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Features</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Unleash the power of AI with advanced features that improve user engagement, simplify content management, and provide flexible learning solutions.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-lightTeal p-6 rounded-lg shadow-lg relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-teal rounded-t-lg"></div>
+                    <div class="flex gap-2 items-start">
+                    <img src="/svgComponents/dotsBlue.svg" alt="Feature icon" class="w-8 h-8 mb-4">
+                    <div class="flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3">Customized Website Templates</h3>
+                    <p class="text-gray-600 text-sm">Design unique and professional e-learning platform effortlessly with our customizable templates. </p>
+                </div>
+                </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-lightGray p-6 rounded-lg shadow-lg relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-darkGray rounded-t-lg"></div>
+                    <div class="flex gap-2 items-start">
+                    <img src="/svgComponents/dotsGray.svg" alt="Feature icon" class="w-8 h-8 mb-4">
+                    <div class="flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3">User-Friendly Dashboard</h3>
+                    <p class="text-gray-600 text-sm">Clean and intuitive dashboard that provides easy access to courses, assignments, and progress tracking for both instructors and learners.</p>
+                </div>
+                </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-lightOrange p-6 rounded-lg shadow-lg relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-teal rounded-t-lg"></div>
+                    <div class="flex gap-2 items-start">
+                    <img src="/svgComponents/dotsOrange.svg" alt="Feature icon" class="w-8 h-8 mb-4">
+                    <div class="flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3">Course Creation & Management</h3>
+                    <p class="text-gray-600 text-sm">Allows for the easy creation, organization, and delivery of online courses by providing tools to upload various learning materials and structure content logically.</p>
+                </div>
+                </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-lightOrange p-6 rounded-lg shadow-lg relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-teal rounded-t-lg"></div>
+                    <div class="flex gap-2 items-start">
+                    <img src="/svgComponents/dotsOrange.svg" alt="Feature icon" class="w-8 h-8 mb-4">
+                    <div class="flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3">Analytics & Insights</h3>
+                    <p class="text-gray-600 text-sm">Gain insights into learner behavior and course effectiveness. Monitor performance metrics, track engagement trends, and access real-time dashboards to make data-driven decisions.</p>
+                </div>
+                </div>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-lightTeal p-6 rounded-lg shadow-lg relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-teal rounded-t-lg"></div>
+                    <div class="flex gap-2 items-start">
+                    <img src="/svgComponents/dotsBlue.svg" alt="Feature icon" class="w-8 h-8 mb-4">
+                    <div class="flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3">Secure Role-Based Access</h3>
+                    <p class="text-gray-600 text-sm">Assign specific roles and permissions to users, ensuring secure and controlled access to course content and platform features.</p>
+                </div>
+                </div>
+                </div>
+               
+                <!-- Feature 6 -->
+                <div class="bg-lightGray p-6 rounded-lg shadow-lg relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-darkGray rounded-t-lg"></div>
+                    <div class="flex gap-2 items-start">
+                    <img src="/svgComponents/dotsGray.svg" alt="Feature icon" class="w-8 h-8 mb-4">
+                    <div class="flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3">Mobile Learning</h3>
+                    <p class="text-gray-600 text-sm">Seamlessly access courses anytime, anywhere with a fully responsive design optimized for desktops, tablets, and smartphones.</p>
+                </div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Why Choose Question Bank Generator Tool?</h2>
+            <p class="text-gray-600 mb-12 max-w-3xl">
+                As an educator, creating fair and comprehensive question papers can be time-consuming. QuestionBank Generator is your open-source, customizable tool that lets you create high-quality question banks quickly and easily—saving you time to focus on what matters most: teaching.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">CUSTOMIZABLE FOR YOUR NEEDS</h3>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">SAVE TIME, TEACH MORE</h3>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">COMPREHENSIVE COVERAGE</h3>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-coral text-white px-8 py-3 rounded-md hover:bg-opacity-90">
+                    Explore Question Bank Generator Tool
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Hear from our Educators</h2>
+                    <p class="text-gray-600 mb-8">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <p class="text-gray-600 mb-4">
+                        As a teacher with a busy schedule, the QuestionBank Generator has been a game-changer for me. It allows me to create customized, high-quality question papers in minutes, saving the hours of planning time. I can easily select topics, adjust difficulty levels, and generate exactly what I need for each class. This tool has truly transformed the way I prepare assessments, and I can't recommend it enough!
+                    </p>
+                    <div class="flex items-center">
+                        <div class="ml-4">
+                            <h4 class="font-semibold">M.K.</h4>
+                            <p class="text-gray-600">Teacher, Ranchi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
