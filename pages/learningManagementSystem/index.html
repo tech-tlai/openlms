@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edu-Reach - Open Minds, Open Possibilities</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lightTeal: '#E5F6F4',
+                        teal: '#40B3A2',
+                        orange: '#FF5722',
+                        orange500: '#f97316',
+                        lightOrange: '#FFEDE5',
+                        darkGray: '#4A4A4A',
+                        lightGray: '#EAEAEA',
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Navigation -->
+    <header class="sticky top-0 left-0 right-0 bg-white z-50 shadow-sm">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <a href="/index.html">
+                    <img src="/svgComponents/edu-reach-color-logo.svg" alt="EduReach Logo" class="h-8">
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-6 text-sm">
+                <a href="/index.html" class="text-gray-600 hover:text-gray-900">Home</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">Documentation</a>
+                <a href="https://github.com/tech-tlai/openlms_public_ui" target="_blank" class="text-gray-600 hover:text-gray-900">Download</a>
+                <!-- <a href="#" class="text-gray-600 hover:text-gray-900">Community</a> -->
+                <!-- <button class="bg-orange500 text-white px-6 py-2 rounded-md hover:bg-orange-600 font-semibold">
+                    Get Started
+                </button> -->
+           </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-5 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-teal mb-6">
+                Open Minds, Open Possibilities
+            </h1>
+            <p class="text-gray-600 mb-4 max-w-2xl mx-auto font-semibold mb-2">
+                Welcome to Edu Reach, where innovation and education come together. Reach new heights with AI-powered tools for seamless content creation and effective learning management.
+            <!-- <p class="text-gray-600 mb-2 max-w-2xl mx-auto mb-6">
+                Discover powerful tools to create, manage, and deliver impactful learning experiences.
+            </p> -->
+            <!-- <button class="bg-orange500 text-white px-6 py-2 rounded-md hover:bg-orange-600 font-semibold">
+                Get Started
+            </button> -->
+        </div>
+        
+        <!-- Decorative Waves -->
+        <!-- <div class="absolute bottom-0 left-0 w-full h-32 overflow-hidden">
+            <div class="absolute bottom-0 w-full h-full bg-teal transform -skew-y-3"></div>
+            <div class="absolute bottom-0 w-full h-full bg-orange transform -skew-y-2"></div>
+        </div> -->
+    </section>
+
+    <!-- Map Section -->
+    <section class="relative z-10 w-full">
+        <div class="w-full mx-auto bg-white rounded-lg ">
+            <img src="map1.png" alt="Course distribution map" class="w-full rounded-lg">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Features</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Unleash the power of AI with advanced features that improve user engagement, simplify content management, and provide flexible learning solutions.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-lightTeal p-6 rounded-lg shadow-lg relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-teal rounded-t-lg"></div>
+                    <div class="flex gap-2 items-start">
+                    <img src="/svgComponents/dotsBlue.svg" alt="Feature icon" class="w-8 h-8 mb-4">
+                    <div class="flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3">Customized Website Templates</h3>
+                    <p class="text-gray-600 text-sm">Design unique and professional e-learning platform effortlessly with our customizable templates. </p>
+                </div>
+                </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-lightGray p-6 rounded-lg shadow-lg relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-darkGray rounded-t-lg"></div>
+                    <div class="flex gap-2 items-start">
+                    <img src="/svgComponents/dotsGray.svg" alt="Feature icon" class="w-8 h-8 mb-4">
+                    <div class="flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3">User-Friendly Dashboard</h3>
+                    <p class="text-gray-600 text-sm">Clean and intuitive dashboard that provides easy access to courses, assignments, and progress tracking for both instructors and learners.</p>
+                </div>
+                </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-lightOrange p-6 rounded-lg shadow-lg relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-teal rounded-t-lg"></div>
+                    <div class="flex gap-2 items-start">
+                    <img src="/svgComponents/dotsOrange.svg" alt="Feature icon" class="w-8 h-8 mb-4">
+                    <div class="flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3">Course Creation & Management</h3>
+                    <p class="text-gray-600 text-sm">Allows for the easy creation, organization, and delivery of online courses by providing tools to upload various learning materials and structure content logically.</p>
+                </div>
+                </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-lightOrange p-6 rounded-lg shadow-lg relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-teal rounded-t-lg"></div>
+                    <div class="flex gap-2 items-start">
+                    <img src="/svgComponents/dotsOrange.svg" alt="Feature icon" class="w-8 h-8 mb-4">
+                    <div class="flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3">Analytics & Insights</h3>
+                    <p class="text-gray-600 text-sm">Gain insights into learner behavior and course effectiveness. Monitor performance metrics, track engagement trends, and access real-time dashboards to make data-driven decisions.</p>
+                </div>
+                </div>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-lightTeal p-6 rounded-lg shadow-lg relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-teal rounded-t-lg"></div>
+                    <div class="flex gap-2 items-start">
+                    <img src="/svgComponents/dotsBlue.svg" alt="Feature icon" class="w-8 h-8 mb-4">
+                    <div class="flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3">Secure Role-Based Access</h3>
+                    <p class="text-gray-600 text-sm">Assign specific roles and permissions to users, ensuring secure and controlled access to course content and platform features.</p>
+                </div>
+                </div>
+                </div>
+               
+                <!-- Feature 6 -->
+                <div class="bg-lightGray p-6 rounded-lg shadow-lg relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-darkGray rounded-t-lg"></div>
+                    <div class="flex gap-2 items-start">
+                    <img src="/svgComponents/dotsGray.svg" alt="Feature icon" class="w-8 h-8 mb-4">
+                    <div class="flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3">Mobile Learning</h3>
+                    <p class="text-gray-600 text-sm">Seamlessly access courses anytime, anywhere with a fully responsive design optimized for desktops, tablets, and smartphones.</p>
+                </div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>
