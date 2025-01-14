@@ -11,11 +11,28 @@
             font-family: 'Inter', sans-serif;
         }
     </style>
+     <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lightTeal: '#E5F6F4',
+                        teal: '#40B3A2',
+                        orange: '#FF5722',
+                        orange500: '#f97316',
+                        lightOrange: '#FFEDE5',
+                        darkGray: '#4A4A4A',
+                        lightGray: '#EAEAEA',
+                    },
+                },
+            },
+        }
+    </script>
 </head>
 <body class="bg-white">
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 bg-white z-50 shadow-sm">
-        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+    <header class="fixed top-0 left-0 right-0 bg-gray-50 z-50 shadow-sm ">
+        <nav class=" mx-auto px-8 lg:px-12 py-4 flex items-center justify-between">
             <div class="flex items-center">
                 <a href="#">
                     <img src="svgComponents/edu-reach-color-logo.svg" alt="EduReach Logo" class="h-8">
@@ -26,7 +43,7 @@
                 <a href="#" class="text-gray-600 hover:text-gray-900">Documentation</a>
                 <a href="https://github.com/tech-tlai/openlms_public_ui" target="_blank" class="text-gray-600 hover:text-gray-900">Download</a>
                 <a href="#" class="text-gray-600 hover:text-gray-900">Community</a> -->
-                <!-- <button class="bg-orange-500 text-white px-6 py-2 rounded-md hover:bg-orange-600 font-semibold">
+                <!-- <button class="bg-orange500 text-white px-6 py-2 rounded-md hover:bg-orange-600 font-semibold">
                     Get Started
                 </button> -->
             <!-- </div> -->
@@ -34,8 +51,8 @@
     </header>
 
 <!-- Hero Section -->
-<section class="pt-20 pb-12 md:pt-20 md:pb-12 bg-white">
-    <div class="container mx-auto px-4">
+<section class="pt-20 md:pt-20 bg-white">
+    <div class=" pt-10 lg:pt-0 mx-auto px-8 lg:px-12">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div class="max-w-xl">
                 <h1 class="text-4xl md:text-5xl font-bold text-[#305D7A] leading-tight mb-6">
@@ -51,7 +68,7 @@
                     </p>
                 </div>
                 <!-- <div class="mt-8">
-                    <button class="bg-orange-500 text-white px-8 py-3 rounded-md hover:bg-orange-600 transition-colors font-semibold text-sm">
+                    <button class="bg-orange500 text-white px-8 py-3 rounded-md hover:bg-orange-600 transition-colors font-semibold text-sm">
                         Get Started
                     </button>
                 </div> -->
@@ -87,7 +104,7 @@
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Service Card 1 -->
                 <!-- <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-start justify-between relative">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-orange-500 rounded-lg mb-1"></div>
+                    <div class="absolute top-0 left-0 w-full h-1 bg-orange500 rounded-lg mb-1"></div>
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <img src="svgComponents/cardIcon3.svg" alt="Website Templates" class="w-12 h-12">
@@ -99,7 +116,7 @@
                         </p>
                     </div>
                     <a href="pages/index.html">
-                        <button class="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 text-sm font-semibold">
+                        <button class="bg-orange500 text-white px-4 py-2 rounded-md hover:bg-orange-600 text-sm font-semibold">
                             Know more
                         </button>
                     </a>
@@ -107,11 +124,11 @@
      -->
                 <!-- Service Card 2 -->
                 <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-start justify-between relative">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-orange-500 rounded-lg mb-1"></div>
+                    <div class="absolute top-0 left-0 w-full h-1 bg-orange500 rounded-lg mb-1"></div>
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <img src="svgComponents/cardIcon2.svg" alt="Content Management" class="w-12 h-12">
-                            <span class="text-orange-500 font-bold text-sm">243+</span>
+                            <span class="text-orange500 font-bold text-sm">243+</span>
                         </div>
                         <h4 class="text-xl font-semibold mb-3  text-[#1B365D]">Learning Management System</h4>
                         <p class="text-gray-600 mb-4 text-sm">
@@ -120,16 +137,16 @@
                     </div>
                    <div class="flex flex-wrap gap-2 mt-2">
                     <a href="https://github.com/tech-tlai/openlms_public_ui" target="_blank">
-                      <button class="bg-orange-500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200">
+                      <button class="bg-orange500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200">
                         Download
                       </button>
                     </a>
 
-                      <button class="bg-orange-500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200">
+                      <button class="bg-orange500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200">
                         Documentation
                       </button>
                       <a href="\pages\learningManagementSystem\index.html">
-                        <button class="bg-orange-500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200">
+                        <button class="bg-orange500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200">
                             Know more
                         </button>
                     </a>
@@ -138,11 +155,11 @@
 
                 <!-- Service Card 3 -->
                 <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-start justify-between relative">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-orange-500 rounded-lg mb-1"></div>
+                    <div class="absolute top-0 left-0 w-full h-1 bg-orange500 rounded-lg mb-1"></div>
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <img src="svgComponents/cardIcon1.svg" alt="Question Bank" class="w-12 h-12">
-                            <span class="text-orange-500 font-bold text-sm">56+</span>
+                            <span class="text-orange500 font-bold text-sm">56+</span>
                         </div>
                         <h4 class="text-xl font-semibold mb-3  text-[#1B365D]">Question Bank Generator</h4>
                         <p class="text-gray-600 mb-4 text-sm">
@@ -150,15 +167,17 @@
                         </p>
                     </div>
                     <div class="flex flex-wrap gap-2 mt-2">
-                        <button class="bg-orange-500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200">
+                        <button class="bg-orange500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200">
                           Download
                         </button>
-                        <button class="bg-orange-500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200">
+                        <button class="bg-orange500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200">
                           Documentation
                         </button>
-                        <button class="bg-orange-500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200">
+                      <a href="pages/questionBankGeneration/index.html">
+                        <button class="bg-orange500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200">
                           Know More
                         </button>
+                        </a>
                       </div>
                 </div>
             </div>
