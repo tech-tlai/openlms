@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edu-Reach - Open Minds, Open Possibilities</title>
+    <title>EduReach - Question Bank Generator</title>
     <base href="/openlms/" />
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
+              coral: "#FF5C35",
               lightTeal: "#E5F6F4",
               teal: "#40B3A2",
               orange: "#FF5722",
@@ -69,13 +70,14 @@
       }
     </style>
   </head>
-  <body class="overflow-x-hidden">
-    <header
-      class="sticky top-0 left-0 right-0 bg-gray-50 z-50 shadow-sm px-8 lg:px-12"
-    >
-      <nav class="mx-auto py-4 flex items-center justify-between">
+  <body class="font-sans">
+    <!-- Header -->
+    <header class="sticky top-0 left-0 right-0 bg-gray-50 z-50 shadow-sm">
+      <nav
+        class="mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between"
+      >
         <div class="flex items-center">
-          <a href="index.html">
+          <a href="/index.html">
             <img
               src="svgComponents/edu-reach-color-logo.svg"
               alt="EduReach Logo"
@@ -114,14 +116,12 @@
               class="block text-xl text-gray-600 hover:text-gray-900"
               >Home</a
             >
-            <a
-              href="pages/lms-docs/index.html"
-              target="_blank"
-              class="block text-xl text-gray-600 hover:text-gray-900"
+            <!-- <a href="#" class="block text-xl text-gray-600 hover:text-gray-900"
               >Documentation</a
-            >
+            > -->
             <a
-              href="pages/learningManagementSystem/index.html#download-section"
+              href="https://github.com/tech-tlai/open-qpg"
+              target="_blank"
               class="block text-xl text-gray-600 hover:text-gray-900"
               >Download</a
             >
@@ -131,61 +131,79 @@
           <a href="index.html" class="text-gray-600 hover:text-gray-900"
             >Home</a
           >
-          <a
-            href="pages/lms-docs/index.html"
-            target="_blank"
-            class="text-gray-600 hover:text-gray-900"
+          <!-- <a href="#" class="text-gray-600 hover:text-gray-900"
             >Documentation</a
-          >
+          > -->
           <a
-            href="pages/learningManagementSystem/index.html#download-section"
+            href="https://github.com/tech-tlai/open-qpg"
+            target="_blank"
             class="text-gray-600 hover:text-gray-900"
             >Download</a
           >
         </div>
       </nav>
     </header>
+
     <!-- Hero Section -->
-    <section class="relative pt-12 pb-2 px-6">
-      <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl font-bold text-teal mb-6">
-          Open Minds, Open Possibilities
-        </h1>
-        <p class="text-gray-600 max-w-2xl mx-auto font-semibold">
-          Welcome to Edu Reach, where innovation and education come together.
-          Reach new heights with AI-powered tools for seamless content creation
-          and effective learning management.
-          <!-- <p class="text-gray-600 mb-2 max-w-2xl mx-auto mb-6">
-                Discover powerful tools to create, manage, and deliver impactful learning experiences.
-            </p> -->
-        </p>
-      </div>
-    </section>
+    <section class="relative bg-white overflow-hidden px-8 pb-32">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <!-- Text Content -->
+          <div class="z-10 pt-10 lg:pt-20">
+            <h1
+              class="text-4xl md:text-5xl font-bold text-[#305D7A] leading-tight mb-6"
+            >
+              Question bank<br />Generation Tool
+            </h1>
+            <h2 class="text-base font-bold text-gray-700 mb-2">
+              UNLOCK THE POWER OF AUTOMATED QUESTION BANK CREATION
+            </h2>
+            <p class="text-gray-600 text-sm">
+              Create comprehensive, high-quality question banks effortlessly
+              with our open-source platform. Whether you're building quizzes,
+              exams, or study materials, our intelligent tools streamline the
+              process, making it easier than ever to generate, customize, and
+              manage your questions.
+            </p>
+          </div>
 
-    <!-- Map Section -->
-    <section class="relative z-10 w-full">
-      <!-- Wave Background Image -->
-      <div class="w-full mx-auto bg-white rounded-lg relative">
-        <img
-          src="svgComponents/blueandOrangeWave.svg"
-          alt="Course distribution map background"
-          class="w-full rounded-lg"
-        />
-
-        <!-- Map Image (On Top of the Wave) -->
-        <div class="absolute inset-0 flex items-center justify-center">
-          <img
-            src="svgComponents/mapHeroSection.svg"
-            alt="Map Image"
-            class="w-1/2 h-auto"
-          />
+          <!-- Hero Image -->
+          <div class="relative z-10">
+            <img
+              src="svgComponents/questionBankHeroSectionImage.svg"
+              alt="Question Bank Generation Tool Illustration"
+              class="w-full h-[300px] lg:h-auto max-w-2xl mx-auto"
+            />
+          </div>
         </div>
+      </div>
+
+      <!-- Wave Background -->
+      <div
+        class="absolute bottom-0 left-0 right-0 w-full overflow-hidden max-w-7xl mx-auto"
+      >
+        <svg
+          width="1437"
+          height="520"
+          viewBox="0 0 1437 520"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1436.5 57C1027.3 351 304 379.5 -2 327V379.5C661.5 660.5 1239.83 454.667 1436.5 316V57Z"
+            fill="#FF611A"
+          />
+          <path
+            d="M1437 0.5C1027.8 294.5 304.5 326.5 -1.5 274V345.5C670.1 591.9 1240.33 398.167 1437 259.5V0.5Z"
+            fill="#3FABAE"
+          />
+        </svg>
       </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-10 px-6">
-      <div class="max-w-6xl mx-auto">
+    <section class="py-8 px-8">
+      <div class="max-w-7xl mx-auto">
         <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">
           Features
         </h2>
@@ -208,11 +226,11 @@
               />
               <div class="flex flex-col">
                 <h3 class="text-xl font-semibold mb-3">
-                  Customized Website Templates
+                  Topic-Based Question Selection
                 </h3>
                 <p class="text-gray-600 text-sm">
-                  Design unique and professional e-learning platform
-                  effortlessly with our customizable templates.
+                  Choose specific topics within a subject and generate a bank of
+                  questions that match your requirements.
                 </p>
               </div>
             </div>
@@ -231,12 +249,12 @@
               />
               <div class="flex flex-col">
                 <h3 class="text-xl font-semibold mb-3">
-                  User-Friendly Dashboard
+                  Question Type Customization
                 </h3>
                 <p class="text-gray-600 text-sm">
-                  Clean and intuitive dashboard that provides easy access to
-                  courses, assignments, and progress tracking for both
-                  instructors and learners.
+                  Select from a variety of question formats: Multiple Choice,
+                  True/False, Fill-in-the-blanks, Short Answer, and more to
+                  create diverse question papers.
                 </p>
               </div>
             </div>
@@ -245,7 +263,7 @@
           <!-- Feature 3 -->
           <div class="bg-lightOrange p-6 rounded-lg shadow-lg relative">
             <div
-              class="absolute top-0 left-0 w-full h-1 bg-teal rounded-t-lg"
+              class="absolute top-0 left-0 w-full h-1 bg-orange500 rounded-t-lg"
             ></div>
             <div class="flex gap-2 items-start">
               <img
@@ -255,12 +273,11 @@
               />
               <div class="flex flex-col">
                 <h3 class="text-xl font-semibold mb-3">
-                  Course Creation & Management
+                  Automatic Difficulty Adjustment
                 </h3>
                 <p class="text-gray-600 text-sm">
-                  Allows for the easy creation, organization, and delivery of
-                  online courses by providing tools to upload various learning
-                  materials and structure content logically.
+                  Set the desired difficulty level for your questions, and let
+                  the tool adjust accordingly.
                 </p>
               </div>
             </div>
@@ -269,7 +286,7 @@
           <!-- Feature 4 -->
           <div class="bg-lightOrange p-6 rounded-lg shadow-lg relative">
             <div
-              class="absolute top-0 left-0 w-full h-1 bg-teal rounded-t-lg"
+              class="absolute top-0 left-0 w-full h-1 bg-orange500 rounded-t-lg"
             ></div>
             <div class="flex gap-2 items-start">
               <img
@@ -278,11 +295,12 @@
                 class="w-8 h-8 mb-4"
               />
               <div class="flex flex-col">
-                <h3 class="text-xl font-semibold mb-3">Analytics & Insights</h3>
+                <h3 class="text-xl font-semibold mb-3">
+                  Question Pool Size Control
+                </h3>
                 <p class="text-gray-600 text-sm">
-                  Gain insights into learner behavior and course effectiveness.
-                  Monitor performance metrics, track engagement trends, and
-                  access real-time dashboards to make data-driven decisions.
+                  Easily choose how many questions you need. Whether it's a
+                  small quiz or a comprehensive exam, we've got you covered.
                 </p>
               </div>
             </div>
@@ -301,12 +319,11 @@
               />
               <div class="flex flex-col">
                 <h3 class="text-xl font-semibold mb-3">
-                  Secure Role-Based Access
+                  Export & Download Options
                 </h3>
                 <p class="text-gray-600 text-sm">
-                  Assign specific roles and permissions to users, ensuring
-                  secure and controlled access to course content and platform
-                  features.
+                  Once your question bank is ready, download it in a format that
+                  suits your needs (PDF, Word, or CSV).
                 </p>
               </div>
             </div>
@@ -324,11 +341,11 @@
                 class="w-8 h-8 mb-4"
               />
               <div class="flex flex-col">
-                <h3 class="text-xl font-semibold mb-3">Mobile Learning</h3>
+                <h3 class="text-xl font-semibold mb-3">Question Analytics</h3>
                 <p class="text-gray-600 text-sm">
-                  Seamlessly access courses anytime, anywhere with a fully
-                  responsive design optimized for desktops, tablets, and
-                  smartphones.
+                  Gain insights into question bank with analytics, showing
+                  coverage by topic, difficulty, and type to ensure a balanced
+                  paper.
                 </p>
               </div>
             </div>
@@ -337,126 +354,181 @@
       </div>
     </section>
 
-    <section class="py-10 px-6">
-      <div class="max-w-6xl mx-auto">
-        <!-- Section Header -->
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-center mb-4 text-[#305D7A]">
-            Downloads
-          </h2>
-          <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Access our comprehensive suite of educational tools. Download the
-            components you need to enhance your learning management experience.
-          </p>
-        </div>
+    <!-- Why Choose Section -->
+    <section class="bg-white py-8 px-8">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold mb-4 text-[#305D7A]">
+          Why Choose Question Bank Generator Tool?
+        </h2>
+        <p class="text-gray-600 mb-12 max-w-2xl">
+          As an educator, creating fair and comprehensive question papers can be
+          time-consuming. QuestionBank Generator is your open-source,
+          customizable tool that lets you create high-quality question banks
+          quickly and easily—saving you time to focus on what matters most:
+          teaching.
+        </p>
 
-        <!-- Download Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          <!-- Customizable Card -->
+          <div class="p-6 rounded-lg bg-[#F5FAFA] shadow-sm">
+            <div class="flex items-center">
+              <img
+                src="svgComponents/windowAndCursorIcon.svg"
+                alt=""
+                class="w-14 h-14"
+              />
+              <div class="w-px h-14 bg-gray-500 mx-4"></div>
+              <h3 class="font-bold text-gray-800">
+                CUSTOMIZABLE<br />FOR YOUR NEEDS
+              </h3>
+            </div>
+          </div>
+
+          <!-- Save Time Card -->
+          <div class="p-6 rounded-lg bg-[#F8F9FA] shadow-sm">
+            <div class="flex items-center">
+              <img
+                src="svgComponents/teachingIcon.svg"
+                alt=""
+                class="w-14 h-14"
+              />
+              <div class="w-px h-14 bg-gray-500 mx-4"></div>
+              <h3 class="font-bold text-gray-800">
+                SAVE TIME,<br />TEACH MORE
+              </h3>
+            </div>
+          </div>
+
+          <!-- Comprehensive Card -->
+          <div class="p-6 rounded-lg bg-[#FFF5F2] shadow-sm">
+            <div class="flex items-center">
+              <img
+                src="svgComponents/comprehensiveCoverageIcon.svg"
+                alt=""
+                class="w-14 h-14"
+              />
+              <div class="w-px h-14 bg-gray-500 mx-4"></div>
+              <h3 class="font-bold text-gray-800">
+                COMPREHENSIVE<br />COVERAGE
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-8 px-8 md:px-20">
+      <div class="max-w-7xl mx-auto">
         <div
-          class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-          id="download-section"
+          class="flex flex-col lg:flex-row gap-6 lg:gap-16 items-start justify-items-center"
         >
-          <!-- Public Frontend Card -->
-          <div
-            class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-start justify-between relative"
-          >
-            <div>
-              <div
-                class="absolute top-0 left-0 w-full h-1 bg-orange500 rounded-lg mb-1"
-              ></div>
-              <div class="w-full">
-                <h4 class="text-xl font-semibold mb-3 text-[#1B365D]">
-                  Public Facing Frontend App
-                </h4>
-                <p class="text-gray-600 mb-4 text-sm">
-                  Access the public-facing interface of our learning management
-                  system. Designed for students and learners.
-                </p>
-              </div>
-            </div>
-            <div class="flex gap-2">
-              <a
-                href="https://github.com/tech-tlai/openlms_public_ui"
-                target="_blank"
-              >
-                <button
-                  class="bg-orange500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200"
-                >
-                  Download
-                </button>
-              </a>
-              <a
-                href="https://development.d3r3vmd5ke99oo.amplifyapp.com"
-                target="_blank"
-              >
-                <button
-                  class="bg-orange500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200"
-                >
-                  View Demo
-                </button>
-              </a>
-            </div>
+          <!-- Left Column -->
+          <div class="w-full lg:w-1/2">
+            <h2 class="text-2xl md:text-3xl font-bold text-[#305D7A] mb-4">
+              Hear from our<br class="hidden md:inline" />
+              Educators
+            </h2>
+            <p class="text-sm md:text-base text-gray-600">
+              Experience the inspiring voices of educators who are shaping the
+              future of learning with EduReach. Through innovative tools and a
+              commitment to excellence, they are transforming classrooms into
+              dynamic spaces where students thrive.
+            </p>
           </div>
 
-          <!-- Admin Frontend Card -->
+          <!-- Right Column - Testimonial Card -->
           <div
-            class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-start justify-between relative"
+            class="flex flex-col w-full lg:w-1/2 items-center justify-center bg-white rounded-lg"
           >
-            <div>
-              <div
-                class="absolute top-0 left-0 w-full h-1 bg-orange500 rounded-lg mb-1"
-              ></div>
-              <div class="w-full">
-                <h4 class="text-xl font-semibold mb-3 text-[#1B365D]">
-                  Admin Facing Frontend App
-                </h4>
-                <p class="text-gray-600 text-sm">
-                  Access the administrative interface for managing content,
-                  users, and system settings.
-                </p>
-              </div>
+            <!-- Image Container with Beige Background -->
+            <div class="w-full rounded-t-lg p-4">
+              <img
+                src="pages/qbg/testimonial image.png"
+                alt="Manoj Kumar Jha"
+                class="w-full h-auto rounded-lg max-w-sm mx-auto"
+              />
             </div>
-            <a
-              href="https://github.com/tech-tlai/openlms_admin_iu"
-              target="_blank"
-            >
-              <button
-                class="bg-orange500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200"
-              >
-                Download
-              </button>
-            </a>
-          </div>
 
-          <!-- Backend Card -->
-          <div
-            class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-start justify-between relative"
-          >
-            <div>
-              <div
-                class="absolute top-0 left-0 w-full h-1 bg-orange500 rounded-lg mb-1"
-              ></div>
-              <div class="w-full">
-                <h4 class="text-xl font-semibold mb-3 text-[#1B365D]">
-                  Backend Application
+            <!-- Testimonial Content -->
+            <div class="py-4 px-6 w-full">
+              <!-- Author Info -->
+              <div class="mb-4">
+                <h4
+                  class="font-bold text-gray-900 uppercase text-xs md:text-sm tracking-wide"
+                >
+                  MANOJ KUMAR JHA
                 </h4>
-                <p class="text-gray-600 text-sm">
-                  Access the core backend services that power the learning
-                  management system.
+                <p class="text-gray-600 text-xs md:text-sm">
+                  Fashion Educator, Ranchi, Jharkhand
                 </p>
               </div>
+
+              <!-- Quote -->
+              <div class="relative">
+                <span class="absolute -left-2 -top-4 text-4xl text-gray-300"
+                  >"</span
+                >
+                <p class="text-gray-600 pl-6 text-xs md:text-sm">
+                  As a teacher with a busy schedule, the QuestionBank Generator
+                  has been a game-changer for me. It allows me to create
+                  customized, high-quality question papers in minutes, saving
+                  the hours of planning time. I can easily select topics, adjust
+                  difficulty levels, and generate exactly what I need for each
+                  class. This tool has truly transformed the way I prepare
+                  assessments, and I can't recommend it enough!
+                </p>
+              </div>
+
+              <!-- Navigation Buttons -->
+              <!-- <div class="flex justify-between items-center mt-6 mx-auto">
+                <button
+                  class="w-6 h-6 flex items-center justify-center bg-orange500 border border-gray-300 rounded-full text-white hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 19l-7-7 7-7"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="w-6 h-6 flex items-center justify-center bg-orange500 border border-gray-300 rounded-full text-white hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+              </div> -->
             </div>
-            <button
-              class="bg-orange500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200"
-            >
-              Download
-            </button>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-10 pb-20 px-6 max-w-6xl mx-auto">
-      <h2 class="text-xl font-bold text-center mb-4 text-[#305D7A]">
+    <section class="py-8 pb-20 px-8 md:px-20 max-w-7xl mx-auto">
+      <h2
+        class="text-xl font-semibold mb-4 text-start md:text-center text-[#305D7A]"
+      >
         Sponsors & Collaborators
       </h2>
 
@@ -507,7 +579,6 @@
         </div>
       </div>
     </section>
-
     <footer class="bg-[#3A3A3A] py-12 px-4">
       <div
         class="container mx-auto px-4 flex flex-row gap-2 items-center w-full justify-center"
@@ -519,7 +590,7 @@
         />
         <div class="w-px h-14 bg-gray-500 mx-8"></div>
         <div class="text-white text-xs sm:text-sm">
-          © 2025. IIT All rights reserved
+          © 2025. RSETI. All rights reserved
         </div>
       </div>
     </footer>
