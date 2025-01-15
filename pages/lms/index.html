@@ -19,49 +19,11 @@
               lightOrange: "#FFEDE5",
               darkGray: "#4A4A4A",
               lightGray: "#EAEAEA",
+              darkBlue: "#1B365D",
             },
           },
         },
       };
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const mobileMenuButton = document.getElementById("mobile-menu-button");
-        const mobileMenu = document.getElementById("mobile-menu");
-        const body = document.body;
-
-        function toggleMenu() {
-          mobileMenu.classList.toggle("hidden");
-          body.classList.toggle("menu-open");
-
-          // Toggle between menu and close icons
-          if (mobileMenu.classList.contains("hidden")) {
-            mobileMenuButton.innerHTML =
-              '<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
-          } else {
-            mobileMenuButton.innerHTML =
-              '<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
-          }
-        }
-
-        mobileMenuButton.addEventListener("click", toggleMenu);
-
-        // Close mobile menu when clicking a link
-        mobileMenu.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", toggleMenu);
-        });
-
-        // Close mobile menu when window is resized to larger screen
-        window.addEventListener("resize", function () {
-          if (window.innerWidth >= 768) {
-            // 768px is the 'md' breakpoint in Tailwind
-            mobileMenu.classList.add("hidden");
-            body.classList.remove("menu-open");
-            mobileMenuButton.innerHTML =
-              '<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
-          }
-        });
-      });
     </script>
     <style>
       .menu-open {
@@ -186,7 +148,7 @@
     <!-- Features Section -->
     <section class="py-10 px-6">
       <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">
+        <h2 class="text-3xl font-bold text-center mb-4 text-[#305D7A]">
           Features
         </h2>
         <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
@@ -207,7 +169,7 @@
                 class="w-8 h-8 mb-4"
               />
               <div class="flex flex-col">
-                <h3 class="text-xl font-semibold mb-3">
+                <h3 class="text-xl font-semibold mb-3 text-darkBlue">
                   Customized Website Templates
                 </h3>
                 <p class="text-gray-600 text-sm">
@@ -230,7 +192,7 @@
                 class="w-8 h-8 mb-4"
               />
               <div class="flex flex-col">
-                <h3 class="text-xl font-semibold mb-3">
+                <h3 class="text-xl font-semibold mb-3 text-darkBlue">
                   User-Friendly Dashboard
                 </h3>
                 <p class="text-gray-600 text-sm">
@@ -254,7 +216,7 @@
                 class="w-8 h-8 mb-4"
               />
               <div class="flex flex-col">
-                <h3 class="text-xl font-semibold mb-3">
+                <h3 class="text-xl font-semibold mb-3 text-darkBlue">
                   Course Creation & Management
                 </h3>
                 <p class="text-gray-600 text-sm">
@@ -278,7 +240,9 @@
                 class="w-8 h-8 mb-4"
               />
               <div class="flex flex-col">
-                <h3 class="text-xl font-semibold mb-3">Analytics & Insights</h3>
+                <h3 class="text-xl font-semibold mb-3 text-darkBlue">
+                  Analytics & Insights
+                </h3>
                 <p class="text-gray-600 text-sm">
                   Gain insights into learner behavior and course effectiveness.
                   Monitor performance metrics, track engagement trends, and
@@ -300,7 +264,7 @@
                 class="w-8 h-8 mb-4"
               />
               <div class="flex flex-col">
-                <h3 class="text-xl font-semibold mb-3">
+                <h3 class="text-xl font-semibold mb-3 text-darkBlue">
                   Secure Role-Based Access
                 </h3>
                 <p class="text-gray-600 text-sm">
@@ -324,7 +288,9 @@
                 class="w-8 h-8 mb-4"
               />
               <div class="flex flex-col">
-                <h3 class="text-xl font-semibold mb-3">Mobile Learning</h3>
+                <h3 class="text-xl font-semibold mb-3 text-darkBlue">
+                  Mobile Learning
+                </h3>
                 <p class="text-gray-600 text-sm">
                   Seamlessly access courses anytime, anywhere with a fully
                   responsive design optimized for desktops, tablets, and
@@ -361,7 +327,7 @@
                 class="absolute top-0 left-0 w-full h-1 bg-orange500 rounded-lg mb-1"
               ></div>
               <div class="w-full">
-                <h4 class="text-xl font-semibold mb-3 text-[#1B365D]">
+                <h4 class="text-xl font-semibold mb-3 text-darkBlue">
                   Public Facing Frontend App
                 </h4>
                 <p class="text-gray-600 mb-4 text-sm">
@@ -403,7 +369,7 @@
                 class="absolute top-0 left-0 w-full h-1 bg-orange500 rounded-lg mb-1"
               ></div>
               <div class="w-full">
-                <h4 class="text-xl font-semibold mb-3 text-[#1B365D]">
+                <h4 class="text-xl font-semibold mb-3 text-darkBlue">
                   Admin Facing Frontend App
                 </h4>
                 <p class="text-gray-600 text-sm">
@@ -469,55 +435,74 @@
       </div>
     </section>
 
-    <section class="py-10 pb-20 px-6 max-w-6xl mx-auto">
-      <h2 class="text-xl font-bold text-center mb-4 text-[#305D7A]">
-        Sponsors & Collaborators
-      </h2>
+    <section class="py-10 pt-20 pb-20 px-6 bg-[#f5f5f5]">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-4 text-[#305D7A]">
+          Sponsors & Collaborators
+        </h2>
+        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+          United by a shared vision, the collective effort of these sponsors and
+          partners brings this platform to life.
+        </p>
 
-      <div
-        class="flex flex-col md:flex-row gap-4 md:gap-8 items-center max-w-4xl mx-auto"
-      >
-        <!-- Fund Sponsors -->
-        <div class="flex flex-col items-center w-full md:w-1/3">
-          <div
-            class="h-20 flex items-center justify-center mb-4 p-4 shadow-md w-full"
-          >
-            <img
-              src="images/bankOfAmerica.png"
-              alt="Bank of America"
-              class="max-h-full object-contain"
-            />
-          </div>
-          <span class="text-sm text-gray-600">Fund Sponsor</span>
-        </div>
-
-        <!-- TensorLogic -->
-        <div class="flex-col w-full md:w-2/3">
-          <div class="flex flex-col md:flex-row gap-4 md:gap-8">
+        <div class="flex flex-col items-center gap-8 max-w-3xl mx-auto">
+          <!-- Fund Sponsors -->
+          <div class="w-full max-w-xs">
             <div class="flex flex-col items-center">
               <div
-                class="h-20 flex items-center justify-center mb-4 p-4 shadow-md w-full"
+                class="h-24 flex items-center justify-center mb-4 p-3 shadow-md w-full bg-white"
               >
                 <img
-                  src="images/tensorLogiclogo.png"
-                  alt="TensorLogic"
+                  src="images/bankOfAmerica.png"
+                  alt="Bank of America"
                   class="max-h-full object-contain"
                 />
               </div>
+              <span class="text-sm text-gray-600">Fund Sponsor</span>
             </div>
+          </div>
 
-            <!-- AVM School -->
-            <div class="flex flex-col items-center">
+          <!-- Partners -->
+          <div class="w-full">
+            <div class="flex flex-col items-center gap-4">
               <div
-                class="h-20 flex items-center justify-center mb-4 p-4 shadow-md w-full"
+                class="flex flex-col sm:flex-row gap-4 w-full justify-center items-center"
               >
-                <p class="text-sm md:text-base text-gray-800 font-semibold">
-                  AVM Matriculation Higher Secondary School, Thiruporur
-                </p>
+                <!-- TensorLogic -->
+                <div
+                  class="flex flex-col items-center w-full sm:w-[45%] max-w-xs"
+                >
+                  <div
+                    class="h-24 flex items-center justify-center mb-4 p-3 shadow-md w-full bg-white"
+                  >
+                    <img
+                      src="images/tensorLogiclogo.png"
+                      alt="TensorLogic"
+                      class="max-h-full object-contain"
+                    />
+                  </div>
+                </div>
+
+                <!-- AVM School -->
+                <div
+                  class="flex flex-col items-center w-full sm:w-[45%] max-w-xs"
+                >
+                  <div
+                    class="h-24 flex items-center justify-center mb-4 p-3 shadow-md w-full bg-white"
+                  >
+                    <p
+                      class="text-xs sm:text-sm darkBlue font-semibold text-center"
+                    >
+                      AVM Matriculation Higher Secondary School, Thiruporur
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="text-sm text-gray-600 text-center w-full">
+                Partners
               </div>
             </div>
           </div>
-          <div class="text-sm text-gray-600 text-center w-full">Partners</div>
         </div>
       </div>
     </section>
@@ -533,9 +518,48 @@
         />
         <div class="w-px h-14 bg-gray-500 mx-8"></div>
         <div class="text-white text-xs sm:text-sm">
-          © 2025. IIT All rights reserved
+          © 2025. All rights reserved
         </div>
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const body = document.body;
+
+        function toggleMenu() {
+          mobileMenu.classList.toggle("hidden");
+          body.classList.toggle("menu-open");
+
+          // Toggle between menu and close icons
+          if (mobileMenu.classList.contains("hidden")) {
+            mobileMenuButton.innerHTML =
+              '<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
+          } else {
+            mobileMenuButton.innerHTML =
+              '<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+          }
+        }
+
+        mobileMenuButton.addEventListener("click", toggleMenu);
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", toggleMenu);
+        });
+
+        // Close mobile menu when window is resized to larger screen
+        window.addEventListener("resize", function () {
+          if (window.innerWidth >= 768) {
+            // 768px is the 'md' breakpoint in Tailwind
+            mobileMenu.classList.add("hidden");
+            body.classList.remove("menu-open");
+            mobileMenuButton.innerHTML =
+              '<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
+          }
+        });
+      });
+    </script>
   </body>
 </html>
