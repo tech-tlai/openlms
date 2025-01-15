@@ -341,7 +341,10 @@
       <div class="max-w-6xl mx-auto">
         <!-- Section Header -->
         <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-center mb-4 text-[#305D7A]">
+          <h2
+            class="text-3xl font-bold text-center mb-4 text-[#305D7A]"
+            id="download-section"
+          >
             Downloads
           </h2>
           <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
@@ -351,10 +354,7 @@
         </div>
 
         <!-- Download Cards Grid -->
-        <div
-          class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-          id="download-section"
-        >
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Public Frontend Card -->
           <div
             class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-start justify-between relative"
@@ -415,16 +415,26 @@
                 </p>
               </div>
             </div>
-            <a
-              href="https://github.com/tech-tlai/openlms_admin_iu"
-              target="_blank"
-            >
-              <button
-                class="bg-orange500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200"
+
+            <div class="flex gap-2">
+              <a
+                href="https://github.com/tech-tlai/openlms_admin_iu"
+                target="_blank"
               >
-                Download
-              </button>
-            </a>
+                <button
+                  class="bg-orange500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200"
+                >
+                  Download
+                </button>
+              </a>
+              <a href="pages/in-progress/index.html" target="_blank">
+                <button
+                  class="bg-orange500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200"
+                >
+                  View Demo
+                </button>
+              </a>
+            </div>
           </div>
 
           <!-- Backend Card -->
@@ -445,12 +455,18 @@
                 </p>
               </div>
             </div>
-            <button
-              disabled
-              class="bg-orange500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200"
-            >
-              Download
-            </button>
+            <div class="flex gap-2">
+              <a
+                href="https://github.com/tech-tlai/openlms_api"
+                target="_blank"
+              >
+                <button
+                  class="bg-orange500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200"
+                >
+                  Download
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </div>
