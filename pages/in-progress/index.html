@@ -3,9 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>In Progress</title>
+    <title>Work in Progress - EduReach</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3EBFAE",
+              secondary: "#FF5C35",
+              darkBlue: "#1B365D",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
-    Work in progress!
+  <body class="bg-white min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <header class="sticky top-0 left-0 right-0 bg-gray-50 z-50 shadow-sm">
+      <nav
+        class="mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between"
+      >
+        <div class="flex items-center">
+          <a href="index.html">
+            <img
+              src="svgComponents/edu-reach-color-logo.svg"
+              alt="EduReach Logo"
+              class="h-8"
+            />
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <section
+      class="relative bg-white overflow-hidden px-8 pb-10 md:pb-40 mb-20 md:mb-40"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <!-- Text Content -->
+          <div class="z-10 pt-10 lg:pt-10 pb-10">
+            <h1
+              class="text-4xl md:text-5xl font-bold text-[#305D7A] leading-tight mb-6"
+            >
+              OOPS!<br />Work in Progress
+            </h1>
+            <p class="text-gray-600 text-sm">
+              We're building something great! Our website is currently under
+              construction, but we're working hard to bring you an enhanced
+              experience. Please check back soon for exciting updates and new
+              features.
+            </p>
+          </div>
+
+          <!-- Hero Image -->
+          <div class="relative z-10">
+            <img
+              src="/svgComponents/progress.svg"
+              alt="Question Bank Generation Tool Illustration"
+              class="w-full h-[300px] lg:h-auto max-w-2xl mx-auto"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Wave Background -->
+      <div
+        class="absolute bottom-0 left-0 right-0 w-full overflow-hidden max-w-7xl mx-auto"
+      >
+        <svg
+          width="1437"
+          height="520"
+          viewBox="0 0 1437 520"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1436.5 57C1027.3 351 304 379.5 -2 327V379.5C661.5 660.5 1239.83 454.667 1436.5 316V57Z"
+            fill="#FF611A"
+          />
+          <path
+            d="M1437 0.5C1027.8 294.5 304.5 326.5 -1.5 274V345.5C670.1 591.9 1240.33 398.167 1437 259.5V0.5Z"
+            fill="#3FABAE"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#3A3A3A] py-12 px-4">
+      <div
+        class="container mx-auto px-4 flex flex-row gap-2 items-center w-full justify-center"
+      >
+        <img
+          src="svgComponents/logoWhite.svg"
+          alt="EduReach Logo"
+          class="h-6 sm:h-8"
+        />
+        <div class="w-px h-14 bg-gray-500 mx-8"></div>
+        <div class="text-white text-xs sm:text-sm">
+          © 2025. All rights reserved
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
