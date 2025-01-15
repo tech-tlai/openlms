@@ -2,10 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Edu-Reach - Open Minds, Open Possibilities</title>
     <base href="/openlms/" />
-    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/favicon.png"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -19,19 +26,27 @@
               lightOrange: "#FFEDE5",
               darkGray: "#4A4A4A",
               lightGray: "#EAEAEA",
-              darkBlue:"#1B365D"
+              darkBlue: "#1B365D",
             },
           },
         },
       };
     </script>
+      <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+        body {
+          font-family: "Inter", sans-serif;
+        }
+      </style>
     <style>
       .menu-open {
         overflow: hidden;
       }
     </style>
   </head>
+
   <body class="overflow-x-hidden">
+    <!----------------------------------- Header ----------------------------------------->
     <header
       class="sticky top-0 left-0 right-0 bg-gray-50 z-50 shadow-sm px-8 lg:px-12"
     >
@@ -90,7 +105,9 @@
           </div>
         </div>
         <div class="hidden md:flex items-center space-x-6 text-sm">
-          <a href="index.html" class="text-gray-600 hover:text-gray-900"
+          <a
+            href="index.html"
+            class="text-gray-600 hover:text-gray-900"
             >Home</a
           >
           <a
@@ -107,24 +124,23 @@
         </div>
       </nav>
     </header>
-    <!-- Hero Section -->
+
+    <!------------------------------------- Hero Section ----------------------------------->
     <section class="relative pt-12 pb-2 px-6">
       <div class="max-w-4xl mx-auto text-center">
         <h1 class="text-4xl md:text-5xl font-bold text-teal mb-6">
           Open Minds, Open Possibilities
         </h1>
         <p class="text-gray-600 max-w-2xl mx-auto font-semibold">
-          Welcome to Edu Reach, where innovation and education come together.
-          Reach new heights with AI-powered tools for seamless content creation
-          and effective learning management.
-          <!-- <p class="text-gray-600 mb-2 max-w-2xl mx-auto mb-6">
-                Discover powerful tools to create, manage, and deliver impactful learning experiences.
-            </p> -->
+          Our Content Management System (CMS) simplifies the way you organize
+          and present educational content. With support for various content
+          types, the CMS ensures efficient management and accessibility, all in
+          one unified platform.
         </p>
       </div>
     </section>
 
-    <!-- Map Section -->
+    <!------------------------------------- Hero Image Section --------------------------------->
     <section class="relative z-10 w-full">
       <!-- Wave Background Image -->
       <div class="w-full mx-auto bg-white rounded-lg relative">
@@ -145,16 +161,16 @@
       </div>
     </section>
 
-    <!-- Features Section -->
+    <!----------------------------------- Features Section -------------------------------------->
     <section class="py-10 px-6">
       <div class="max-w-6xl mx-auto">
         <h2 class="text-3xl font-bold text-center mb-4 text-[#305D7A]">
           Features
         </h2>
         <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-          Unleash the power of AI with advanced features that improve user
-          engagement, simplify content management, and provide flexible learning
-          solutions.
+          Unleash our advanced features that improve user engagement and
+          simplify content management with tools to upload, tag, and organize
+          resources, creating a seamless and accessible online portal.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Feature 1 -->
@@ -240,7 +256,9 @@
                 class="w-8 h-8 mb-4"
               />
               <div class="flex flex-col">
-                <h3 class="text-xl font-semibold mb-3 text-darkBlue">Analytics & Insights</h3>
+                <h3 class="text-xl font-semibold mb-3 text-darkBlue">
+                  Analytics & Insights
+                </h3>
                 <p class="text-gray-600 text-sm">
                   Gain insights into learner behavior and course effectiveness.
                   Monitor performance metrics, track engagement trends, and
@@ -286,7 +304,9 @@
                 class="w-8 h-8 mb-4"
               />
               <div class="flex flex-col">
-                <h3 class="text-xl font-semibold mb-3 text-darkBlue">Mobile Learning</h3>
+                <h3 class="text-xl font-semibold mb-3 text-darkBlue">
+                  Mobile Learning
+                </h3>
                 <p class="text-gray-600 text-sm">
                   Seamlessly access courses anytime, anywhere with a fully
                   responsive design optimized for desktops, tablets, and
@@ -299,9 +319,9 @@
       </div>
     </section>
 
+    <!----------------------------------- Downloads Section ------------------------------------->
     <section class="py-10 px-6 pb-20">
       <div class="max-w-6xl mx-auto">
-        <!-- Section Header -->
         <div class="text-center mb-12">
           <h2
             class="text-3xl font-bold text-center mb-4 text-[#305D7A]"
@@ -389,7 +409,10 @@
                   Download
                 </button>
               </a>
-              <a href="pages/in-progress/index.html" target="_blank">
+              <a
+                href="pages/in-progress/index.html"
+                target="_blank"
+              >
                 <button
                   class="bg-orange500 text-white px-3 py-1.5 rounded-md hover:bg-orange-600 text-xs font-semibold transition-colors duration-200"
                 >
@@ -434,62 +457,80 @@
       </div>
     </section>
 
+    <!------------------------------------ Sponsors and Collaborators Section ------------------>
+    <section class="py-10 pt-20 pb-20 px-6 bg-[#f5f5f5]">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-4 text-[#305D7A]">
+          Sponsors & Collaborators
+        </h2>
+        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+          United by a shared vision, the collective effort of these sponsors and
+          partners brings this platform to life.
+        </p>
 
-    <section class="py-10 pt-20 pb-20 px-6   bg-[#f5f5f5]">
-      <div class="max-w-6xl  mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-4 text-[#305D7A]">
-        Sponsors & Collaborators
-      </h2>
-      <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-        United by a shared vision, the collective effort of these sponsors and partners brings this platform to life.
-      </p>
-    
-      <div class="flex flex-col items-center gap-8 max-w-3xl mx-auto ">
-        <!-- Fund Sponsors -->
-        <div class="w-full max-w-xs">
-          <div class="flex flex-col items-center">
-            <div class="h-24 flex items-center justify-center mb-4 p-3 shadow-md w-full bg-white">
-              <img
-                src="images/bankOfAmerica.png"
-                alt="Bank of America"
-                class="max-h-full object-contain"
-              />
+        <div class="flex flex-col items-center gap-8 max-w-3xl mx-auto">
+          <!-- Fund Sponsors -->
+          <div class="w-full max-w-xs">
+            <div class="flex flex-col items-center">
+              <div
+                class="h-24 flex items-center justify-center mb-4 p-3 shadow-md w-full bg-white"
+              >
+                <img
+                  src="images/bankOfAmerica.png"
+                  alt="Bank of America"
+                  class="max-h-full object-contain"
+                />
+              </div>
+              <span class="text-sm text-gray-600">Fund Sponsor</span>
             </div>
-            <span class="text-sm text-gray-600">Fund Sponsor</span>
           </div>
-        </div>
-    
-        <!-- Partners -->
-        <div class="w-full">
-          <div class="flex flex-col items-center gap-4">
-            <div class="flex flex-col sm:flex-row gap-4 w-full justify-center items-center">
-              <!-- TensorLogic -->
-              <div class="flex flex-col items-center w-full sm:w-[45%] max-w-xs">
-                <div class="h-24 flex items-center justify-center mb-4 p-3 shadow-md w-full bg-white">
-                  <img
-                    src="images/tensorLogiclogo.png"
-                    alt="TensorLogic"
-                    class="max-h-full object-contain"
-                  />
+
+          <!-- Partners -->
+          <div class="w-full">
+            <div class="flex flex-col items-center gap-4">
+              <div
+                class="flex flex-col sm:flex-row gap-4 w-full justify-center items-center"
+              >
+                <!-- TensorLogic -->
+                <div
+                  class="flex flex-col items-center w-full sm:w-[45%] max-w-xs"
+                >
+                  <div
+                    class="h-24 flex items-center justify-center mb-4 p-3 shadow-md w-full bg-white"
+                  >
+                    <img
+                      src="images/tensorLogiclogo.png"
+                      alt="TensorLogic"
+                      class="max-h-full object-contain"
+                    />
+                  </div>
+                </div>
+
+                <!-- AVM School -->
+                <div
+                  class="flex flex-col items-center w-full sm:w-[45%] max-w-xs"
+                >
+                  <div
+                    class="h-24 flex items-center justify-center mb-4 p-3 shadow-md w-full bg-white"
+                  >
+                    <p
+                      class="text-xs sm:text-sm darkBlue font-semibold text-center"
+                    >
+                      AVM Matriculation Higher Secondary School, Thiruporur
+                    </p>
+                  </div>
                 </div>
               </div>
-    
-              <!-- AVM School -->
-              <div class="flex flex-col items-center w-full sm:w-[45%] max-w-xs ">
-                <div class="h-24 flex items-center justify-center mb-4 p-3 shadow-md w-full bg-white">
-                  <p class="text-xs sm:text-sm darkBlue font-semibold text-center">
-                    AVM Matriculation Higher Secondary School, Thiruporur
-                  </p>
-                </div>
+              <div class="text-sm text-gray-600 text-center w-full">
+                Partners
               </div>
             </div>
-            <div class="text-sm text-gray-600 text-center w-full">Partners</div>
           </div>
         </div>
       </div>
-    </div>
     </section>
 
+    <!----------------------------------------- Footer -------------------------------------->
     <footer class="bg-[#3A3A3A] py-12 px-4">
       <div
         class="container mx-auto px-4 flex flex-row gap-2 items-center w-full justify-center"
@@ -505,7 +546,9 @@
         </div>
       </div>
     </footer>
+
     <script>
+      // ------------------- Functions for Mobile Menu -------------------------------------
       document.addEventListener("DOMContentLoaded", function () {
         const mobileMenuButton = document.getElementById("mobile-menu-button");
         const mobileMenu = document.getElementById("mobile-menu");
