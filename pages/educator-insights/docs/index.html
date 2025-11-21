@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation</title>
+    <base href="/" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link href="/styles/output.css" rel="stylesheet" />
+    <style>
+      code {
+        padding: 4px;
+      }
+
+      .sidebar a {
+        font-weight: 400;
+        color: gray;
+      }
+
+      .sidebar a.active {
+        font-weight: 600;
+        color: #3b35e1;
+      }
+
+      @media (max-width: 768px) {
+        .sidebar {
+          transform: translateX(-100%);
+          transition: transform 0.3s ease-in-out;
+        }
+        .sidebar.active {
+          transform: translateX(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- Mobile Menu Button -->
+    <button
+      id="menuButton"
+      class="md:hidden fixed top-4 right-4 z-50 p-2 bg-white rounded shadow"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+    </button>
+
+    <!-- Left Sidebar Navigation -->
+    <nav
+      class="sidebar fixed left-0 top-0 bottom-0 w-64 bg-white border-r overflow-y-auto p-4 md:translate-x-0"
+    >
+      <div class="mb-8">
+        <h1 class="text-base font-bold">Documentation</h1>
+      </div>
+      <ul class="space-y-2">
+        <li>
+          <a
+            href="pages/educator-insights/docs/index.html#Introduction"
+            class="block font-medium"
+            >Introduction</a
+          >
+        </li>
+        <li>
+          <a
+            href="pages/educator-insights/docs/index.html#Why EduReach"
+            class="block hover:text-blue-600"
+            >Why EduReach ?</a
+          >
+        </li>
+        <li>
+          <a
+            href="pages/educator-insights/docs/index.html#Installation"
+            class="block hover:text-blue-600 flex justify-between items-center"
+          >
+            Installation
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a
+            href="pages/educator-insights/docs/index.html#Frontend Architecture"
+            class="block hover:text-blue-600"
+            >Frontend Architecture</a
+          >
+        </li>
+        <li>
+          <a
+            href="pages/educator-insights/docs/index.html#Using the application"
+            class="block hover:text-blue-600"
+            >Using the Application</a
+          >
+        </li>
+        <li>
+          <a
+            href="pages/educator-insights/docs/index.html#API Reference"
+            class="block hover:text-blue-600"
+            >API Reference</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="md:ml-64 p-8">
+      <!-- Breadcrumb -->
+      <div class="flex items-center space-x-2 text-sm mb-6">
+        <a href="index.html" class="text-gray-600 hover:text-blue-600">Home</a>
+        <span class="text-gray-400">/</span>
+        <span class="text-gray-900">Documentation</span>
+      </div>
+
+      <!-- Content -->
+      <div class="max-w-3xl">
+        <h1 class="text-3xl font-bold mb-6">
+          Educator Insights Application Documentation
+        </h1>
+        <div class="prose max-w-none text-gray-600">
+          <h2 class="text-2xl font-semibold mb-4 mt-8" id="Introduction">
+            Introduction
+          </h2>
+          <p class="mb-6">
+            The Educator Insights tool is a an application that enables teachers
+            to analyze student performance across classes and subjects. The
+            dashboard provides interactive charts, filters, and data
+            visualizations, allowing teachers to view performance trends,
+            strengths, weaknesses, and score distributions for their classes.
+          </p>
+          <!-- <p><strong>EduReach comprises three key modules:</strong></p>
+          <br />
+          <ol>
+            <li>
+              <strong>Public-facing frontend app:</strong> For learners to
+              access and interact with courses.
+            </li>
+            <li>
+              <strong>Administrator frontend app:</strong> For managing users,
+              courses, and platform settings.
+            </li>
+            <li>
+              <strong>Robust backend app:</strong> Provides a secure and
+              scalable foundation for both frontends. This modular architecture
+              enhances flexibility, maintainability, and independent development
+              of each component.
+            </li>
+          </ol> -->
+
+          <h2 class="text-2xl font-semibold mb-4 mt-8" id="Why EduReach">
+            Key Features
+          </h2>
+          <ul class="text-gray-600 mb-4 list-disc ml-8">
+            <li>
+              <strong>File Upload:</strong> Teachers can upload Excel files
+              containing student performance data. Uploaded files are processed
+              and used to populate dashboard charts.
+            </li>
+            <li>
+              <strong>Class & Subject Filtering:</strong> Teachers can filter
+              data by class and subject using a tabbed interface. Only one
+              class-subject combination is shown at a time (e.g., "Class 7A
+              English").
+            </li>
+            <li>
+              <strong>Charts & Visualizations:</strong> Includes performance
+              trend charts, section-wise score distribution, topic-wise
+              analysis, and more.
+            </li>
+          </ul>
+
+          <!-- ================Installation================ -->
+          <section>
+            <h2 class="text-2xl font-semibold mb-4 mt-8" id="Installation">
+              Installation
+            </h2>
+            <h3 class="text-xl font-semibold mb-4 mt-8">
+              Frontend Application
+            </h3>
+            <ol class="list-decimal">
+              <li>Clone the repo and navigate to the project directory:</li>
+              <h5 class="my-2 font-medium">
+                Public Facing Frontend Application
+              </h5>
+              <pre
+                class="bg-gray-100 p-4 rounded-lg mb-6 break-words overflow-x-auto"
+              ><code>git clone https://github.com/tech-tlai/openlms_public_ui.git <br>cd openlms_public_ui</code></pre>
+
+              <h5 class="my-2 font-medium">Admin Frontend Application</h5>
+
+              <pre
+                class="bg-gray-100 p-4 rounded-lg mb-6 break-words overflow-x-auto"
+              ><code>git clone https://github.com/tech-tlai/openlms_admin_iu.git <br>cd openlms_admin_iu</code></pre>
+
+              <li>Install dependencies:</li>
+              <pre
+                class="bg-gray-100 p-4 rounded-lg mb-6"
+              ><code>npm install</code></pre>
+
+              <li>Run the application</li>
+              <pre
+                class="bg-gray-100 p-4 rounded-lg mb-6"
+              ><code>npm run dev</code></pre>
+            </ol>
+          </section>
+
+          <!-- ======================Frontend tech stack================= -->
+          <section>
+            <h2
+              class="text-2xl font-semibold mb-4 mt-8"
+              id="Frontend Architecture"
+            >
+              Frontend Architecture
+            </h2>
+            <div>
+              <h3 class="text-xl font-semibold mb-4 mt-8">Tech Stack</h3>
+              <ul>
+                <li>
+                  Frontend framework :
+                  <a
+                    href="https://www.npmjs.com/package/@sveltejs/kit"
+                    target="_blank"
+                    class="text-blue-500 hover:text-blue-700 underline"
+                    >Svelekit</a
+                  >
+                </li>
+                <li>
+                  CSS Framework :
+                  <a
+                    href="https://www.npmjs.com/package/tailwindcss"
+                    target="_blank"
+                    class="text-blue-500 hover:text-blue-700 underline"
+                    >Tailwind CSS</a
+                  >
+                </li>
+                <li>
+                  Charts and Maps :
+                  <a
+                    href="https://www.npmjs.com/package/charjs"
+                    target="_blank"
+                    class="text-blue-500 hover:text-blue-700 underline"
+                    >Chart JS</a
+                  >,
+                  <a
+                    href="https://www.npmjs.com/package/@amcharts/amcharts5"
+                    target="_blank"
+                    class="text-blue-500 hover:text-blue-700 underline"
+                    >AM Charts</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-4 mt-8">Architecture</h3>
+              <h4 class="text-base font-semibold mb-4 mt-8">File structure</h4>
+              <p>Follows Sveltekit’s recommended project structure.</p>
+              <blockquote class="mb-4 bg-gray-100 p-4 rounded-sm">
+                <p>
+                  my-project/<br />
+                  ├ src/<br />
+                  │ ├ lib/<br />
+                  │ │ ├ server/<br />
+                  │ │ │ └ [server-only lib files]<br />
+                  │ │ └ [lib files]<br />
+                  │ ├ routes/<br />
+                  │ │ └ [routes]<br />
+                  │ ├ app.html<br />
+                  │ ├ error.html<br />
+                  │ ├ hooks.client.js<br />
+                  │ ├ hooks.server.js<br />
+                  │ └ service-worker.js<br />
+                  ├ static/<br />
+                  │ └ [static assets]<br />
+                  ├ package.json<br />
+                  ├ svelte.config.js<br />
+                  ├ tsconfig.json<br />
+                  └ vite.config.js
+                </p>
+              </blockquote>
+              <p>
+                Sveltekit provides a file based routing system. Thereby, the
+                folders inside ‘routes’ folder become routes of the
+                application.<br />
+                <code class="bg-gray-100">lib &gt; Components</code> folder
+                contains all reusable components. However, page specific
+                components will be found in folder in the same name as the page
+                under the <code>lib</code> folder. For eg: components specific
+                to trainingCenters page will be found in
+                <code class="bg-gray-100">lib &gt; trainingCenters</code>
+              </p>
+              <!-- =============Architecture - data loading ============ -->
+              <h4 class="text-base font-semibold mb-4 mt-8">Data Loading</h4>
+              <p>
+                Data loading is done utilizing Sveltekit’s
+                <a href="https://svelte.dev/docs/kit/load">load functions</a>.
+                The attached image shows the data loading strategy followed.
+              </p>
+              <pre
+                class=""
+              ><svg id="mermaid-svg-1UMutfktS3KkFnOV" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="413.03125" style="max-width: 192px;" viewBox="0 0 192 413.03125"><style>#mermaid-svg-1UMutfktS3KkFnOV{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#000000;}#mermaid-svg-1UMutfktS3KkFnOV .error-icon{fill:#552222;}#mermaid-svg-1UMutfktS3KkFnOV .error-text{fill:#552222;stroke:#552222;}#mermaid-svg-1UMutfktS3KkFnOV .edge-thickness-normal{stroke-width:2px;}#mermaid-svg-1UMutfktS3KkFnOV .edge-thickness-thick{stroke-width:3.5px;}#mermaid-svg-1UMutfktS3KkFnOV .edge-pattern-solid{stroke-dasharray:0;}#mermaid-svg-1UMutfktS3KkFnOV .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-svg-1UMutfktS3KkFnOV .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-svg-1UMutfktS3KkFnOV .marker{fill:#666;stroke:#666;}#mermaid-svg-1UMutfktS3KkFnOV .marker.cross{stroke:#666;}#mermaid-svg-1UMutfktS3KkFnOV svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-svg-1UMutfktS3KkFnOV .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#000000;}#mermaid-svg-1UMutfktS3KkFnOV .cluster-label text{fill:#333;}#mermaid-svg-1UMutfktS3KkFnOV .cluster-label span{color:#333;}#mermaid-svg-1UMutfktS3KkFnOV .label text,#mermaid-svg-1UMutfktS3KkFnOV span{fill:#000000;color:#000000;}#mermaid-svg-1UMutfktS3KkFnOV .node rect,#mermaid-svg-1UMutfktS3KkFnOV .node circle,#mermaid-svg-1UMutfktS3KkFnOV .node ellipse,#mermaid-svg-1UMutfktS3KkFnOV .node polygon,#mermaid-svg-1UMutfktS3KkFnOV .node path{fill:#eee;stroke:#999;stroke-width:1px;}#mermaid-svg-1UMutfktS3KkFnOV .node .label{text-align:center;}#mermaid-svg-1UMutfktS3KkFnOV .node.clickable{cursor:pointer;}#mermaid-svg-1UMutfktS3KkFnOV .arrowheadPath{fill:#333333;}#mermaid-svg-1UMutfktS3KkFnOV .edgePath .path{stroke:#666;stroke-width:1.5px;}#mermaid-svg-1UMutfktS3KkFnOV .flowchart-link{stroke:#666;fill:none;}#mermaid-svg-1UMutfktS3KkFnOV .edgeLabel{background-color:white;text-align:center;}#mermaid-svg-1UMutfktS3KkFnOV .edgeLabel rect{opacity:0.5;background-color:white;fill:white;}#mermaid-svg-1UMutfktS3KkFnOV .cluster rect{fill:hsl(210,66.6666666667%,95%);stroke:#26a;stroke-width:1px;}#mermaid-svg-1UMutfktS3KkFnOV .cluster text{fill:#333;}#mermaid-svg-1UMutfktS3KkFnOV .cluster span{color:#333;}#mermaid-svg-1UMutfktS3KkFnOV div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(-160,0%,93.3333333333%);border:1px solid #26a;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-svg-1UMutfktS3KkFnOV:root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}#mermaid-svg-1UMutfktS3KkFnOV flowchart-v2{fill:apa;}</style><g transform="translate(0, 0)"><marker id="flowchart-pointEnd" class="marker flowchart" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="flowchart-pointStart" class="marker flowchart" viewBox="0 0 10 10" refX="0" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="flowchart-circleEnd" class="marker flowchart" viewBox="0 0 10 10" refX="11" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="flowchart-circleStart" class="marker flowchart" viewBox="0 0 10 10" refX="-1" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="flowchart-crossEnd" class="marker cross flowchart" viewBox="0 0 11 11" refX="12" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><marker id="flowchart-crossStart" class="marker cross flowchart" viewBox="0 0 11 11" refX="-1" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path d="M96,49.71875L96,56.111979166666664C96,62.505208333333336,96,75.29166666666667,96,88.078125C96,100.86458333333333,96,113.65104166666667,96,120.04427083333333L96,126.4375" id="L-A-B" class=" edge-thickness-normal edge-pattern-solid flowchart-link LS-A LE-B" style="fill:none;" marker-end="url(#flowchart-pointEnd)"></path><path d="M96,168.15625L96,174.54947916666666C96,180.94270833333334,96,193.72916666666666,96,206.515625C96,219.30208333333334,96,232.08854166666666,96,238.48177083333334L96,244.875" id="L-B-C" class=" edge-thickness-normal edge-pattern-solid flowchart-link LS-B LE-C" style="fill:none;" marker-end="url(#flowchart-pointEnd)"></path><path d="M96,286.59375L96,292.9869791666667C96,299.3802083333333,96,312.1666666666667,96,324.953125C96,337.7395833333333,96,350.5260416666667,96,356.9192708333333L96,363.3125" id="L-C-D" class=" edge-thickness-normal edge-pattern-solid flowchart-link LS-C LE-D" style="fill:none;" marker-end="url(#flowchart-pointEnd)"></path></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(96, 88.078125)"><g class="label" transform="translate(-63.265625, -13.359375)"><foreignObject width="126.53125" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Fetch layout data</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(96, 206.515625)"><g class="label" transform="translate(-87.875, -13.359375)"><foreignObject width="175.75" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Fetch page specific data</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(96, 324.953125)"><g class="label" transform="translate(-65.03125, -13.359375)"><foreignObject width="130.0625" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Pass data as props</span></div></foreignObject></g></g></g><g class="nodes"><g class="node default default" id="flowchart-A-2748" transform="translate(96, 28.859375)"><rect class="basic label-container" style="" rx="0" ry="0" x="-84.6875" y="-20.859375" width="169.375" height="41.71875"></rect><g class="label" style="" transform="translate(-77.1875, -13.359375)"><foreignObject width="154.375" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="nodeLabel">Layout load functions</span></div></foreignObject></g></g><g class="node default default" id="flowchart-B-2749" transform="translate(96, 147.296875)"><rect class="basic label-container" style="" rx="0" ry="0" x="-77.3203125" y="-20.859375" width="154.640625" height="41.71875"></rect><g class="label" style="" transform="translate(-69.8203125, -13.359375)"><foreignObject width="139.640625" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="nodeLabel">Page load functions</span></div></foreignObject></g></g><g class="node default default" id="flowchart-C-2750" transform="translate(96, 265.734375)"><rect class="basic label-container" style="" rx="5" ry="5" x="-53.0859375" y="-20.859375" width="106.171875" height="41.71875"></rect><g class="label" style="" transform="translate(-45.5859375, -13.359375)"><foreignObject width="91.171875" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="nodeLabel">+page.svelte</span></div></foreignObject></g></g><g class="node default default" id="flowchart-D-2751" transform="translate(96, 384.171875)"><rect class="basic label-container" style="" rx="0" ry="0" x="-88" y="-20.859375" width="176" height="41.71875"></rect><g class="label" style="" transform="translate(-80.5, -13.359375)"><foreignObject width="161" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="nodeLabel">Individual components</span></div></foreignObject></g></g></g></g></g></svg></pre>
+              <!-- =============Architecture - Form handling ============ -->
+              <h4 class="text-base font-semibold mb-4 mt-8">Form handling</h4>
+              <p>
+                The product has utilised
+                <a
+                  href="https://svelte.dev/docs/kit/form-actions"
+                  class="text-gray-600 hover:text-blue-600"
+                  >Sveltekit form actions</a
+                >
+                for form handling. Form submissions are thus handled by
+                <em>actions</em> in the corresponding
+                <code class="bg-gray-100">+page.server.js</code> file.
+              </p>
+            </div>
+          </section>
+
+          <!-- ================ using the applciation ============== -->
+          <section>
+            <h2
+              class="text-2xl font-semibold mb-4 mt-8"
+              id="Using the application"
+            >
+              Using the application
+            </h2>
+            <h4 class="mb-4 font-medium">
+              Public Facing Frontend Application
+              <a
+                href="https://development.d3r3vmd5ke99oo.amplifyapp.com/"
+                target="_blank"
+                class="hover:text-blue-600 text-blue-500 underline"
+                >Demo</a
+              >
+            </h4>
+
+            <h4 class="mb-4 font-medium">
+              Admin Frontend Application
+              <a
+                href="https://development.dx4aa92ogmm7m.amplifyapp.com/"
+                target="_blank"
+                class="hover:text-blue-600 text-blue-500 underline"
+                >Demo</a
+              >
+            </h4>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-semibold mb-4 mt-8" id="API Reference">
+              API
+            </h2>
+            <p>
+              The apis used are documented
+              <a
+                class="hover:text-blue-600 text-blue-500 underline"
+                href="http://read-admin-api-dev.ap-south-1.elasticbeanstalk.com/swagger-ui/index.html#/"
+                >here</a
+              >
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Right Sidebar - Table of Contents -->
+    <!-- <aside
+      class="hidden lg:block fixed right-0 top-0 bottom-0 w-64 overflow-y-auto p-8"
+    >
+      <h3 class="text-sm font-semibold text-gray-500 uppercase mb-4">
+        On this page
+      </h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="text-blue-600">Installation</a></li>
+        <li>
+          <a href="#" class="text-gray-600 hover:text-blue-600">Why</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-600 hover:text-blue-600"
+            >Configuration</a
+          >
+        </li>
+        <li>
+          <a href="#" class="text-gray-600 hover:text-blue-600">Basic Usage</a>
+        </li>
+      </ul>
+    </aside> -->
+
+    <script>
+      // Mobile menu toggle
+      const menuButton = document.getElementById("menuButton");
+      const sidebar = document.querySelector(".sidebar");
+
+      menuButton.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+      });
+
+      // Close sidebar when clicking outside on mobile
+      document.addEventListener("click", (e) => {
+        if (
+          window.innerWidth < 768 &&
+          !sidebar.contains(e.target) &&
+          !menuButton.contains(e.target)
+        ) {
+          sidebar.classList.remove("active");
+        }
+      });
+
+      const navLinks = document.querySelectorAll(".sidebar a");
+
+      function handleNavClick(event) {
+        navLinks.forEach((link) => link.classList.remove("active"));
+
+        event.target.classList.add("active");
+      }
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", handleNavClick);
+      });
+    </script>
+  </body>
+</html>
